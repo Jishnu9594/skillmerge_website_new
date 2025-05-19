@@ -25,6 +25,7 @@ export default function Home() {
       <ScrollingBanner />
       <FaqContactSection />
       <Testimonial />
+      <ScrollingBanner />
       <Newsletter />
     </main>
   );
