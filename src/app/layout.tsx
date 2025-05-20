@@ -22,7 +22,7 @@ export default function RootLayout({
           enableSystem={true}
           defaultTheme="light"
         >
-          {/* <Header /> */}
+          <Header />
           {children}
           <Footer />
           <ScrollToTop />

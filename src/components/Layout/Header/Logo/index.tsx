@@ -4,15 +4,19 @@ import Link from "next/link";
 
 const Logo: React.FC = () => {
   return (
-    <Link href="/">
-      <Image
-        src={`${getImagePrefix()}images/logo/skill_merge.png`}
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: "auto", height: "auto" }}
-        quality={100}
-      />
+    <Link href="/" className="inline-block">
+      <div className="w-[170px] h-auto">
+        {" "}
+        {/* Reduced logo width */}
+        <Image
+          src={`${getImagePrefix()}images/logo/skill_merge.png`}
+          alt="Skill Merge Logo"
+          width={160} // Still high-res for clarity
+          height={50}
+          className="w-full h-auto object-contain"
+          priority
+        />
+      </div>
     </Link>
   );
 };

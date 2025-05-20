@@ -7,23 +7,16 @@ import Testimonial from "@/components/Home/Testimonials";
 import ProgramHighlights from "@/components/programhighlights./program";
 import ScrollingBanner from "@/components/scrollingbanner/scrollingbaner";
 import FaqContactSection from "@/components/faq/faq";
+import AboutUsSection from "@/components/Aboutus/About";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "eLearning",
 };
 
-export default function Home() {
+export default function About() {
   return (
     <main>
-      <Hero />
-      <ScrollingBanner />
-      <ProgramHighlights />
-      <Companies />
-      <Courses />
-      <Mentor />
-      <ScrollingBanner />
-      <FaqContactSection />
-      <Testimonial />
+      <AboutUsSection />
       <ScrollingBanner />
     </main>
   );
