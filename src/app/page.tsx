@@ -26,7 +26,6 @@ export default function Home() {
       <FaqContactSection />
       <Testimonial />
       <ScrollingBanner />
-      <Newsletter />
     </main>
   );
 }

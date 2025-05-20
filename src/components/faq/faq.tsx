@@ -5,23 +5,34 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqData = [
   {
-    question: "What is cybersecurity?",
+    question: "What are the prerequisites for this program?",
     answer:
-      "Cybersecurity involves protecting systems and networks from digital attacks through technology and best practices.",
+      "Basic understanding of computer networks is helpful, but no formal prerequisites are required.",
   },
   {
-    question: "Is job placement provided?",
+    question: "How long is the program?",
     answer:
-      "Yes, we offer 100% placement assistance with interview prep and resume support.",
+      "The program typically runs for 12 weeks with flexible learning options.",
   },
   {
-    question: "Are the sessions hands-on?",
+    question: "Is the program available online?",
     answer:
-      "Definitely. All our modules are designed with practical-oriented training.",
+      "Yes, this program is available 100% online with live sessions and recorded access.",
   },
   {
-    question: "Can beginners join?",
-    answer: "Yes, the course starts from basics and is suitable for beginners.",
+    question: "What certification will I receive?",
+    answer:
+      "Upon completion, you'll receive a Certified Cybersecurity Specialist certificate.",
+  },
+  {
+    question: "Do you offer job placement assistance?",
+    answer:
+      "Yes, we offer full placement support including resume reviews and interview preparation.",
+  },
+  {
+    question: "Are there financing options available?",
+    answer:
+      "Yes. We provide installment plans, scholarships for underrepresented groups, and income share agreements.",
   },
 ];
 
@@ -33,64 +44,43 @@ const FaqContactSection = () => {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-20 font-orbitron">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* FAQ Section */}
-        <div>
-          <h2 className="text-4xl font-bold mb-6">FAQs</h2>
-          <div className="space-y-6">
-            {faqData.map((item, index) => (
-              <div
-                key={index}
-                className="p-4 bg-[#111] rounded-xl transition-all duration-300 hover:bg-[#1a1a1a]"
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center text-left text-lg font-semibold"
-                >
-                  {item.question}
-                  {activeIndex === index ? (
-                    <ChevronUp className="text-cyber-green" />
-                  ) : (
-                    <ChevronDown className="text-cyber-green" />
-                  )}
-                </button>
-                {activeIndex === index && (
-                  <p className="mt-2 text-cyber-green text-base">
-                    {item.answer}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+    <section className="bg-black text-white py-20 px-6 md:px-32 font-orbitron">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <p className="text-lg text-gray-400">
+          Find answers to common questions about our Certified Cybersecurity
+          Specialist program.
+        </p>
+      </div>
 
-        {/* Contact Form */}
-        <div className="bg-[#0e0e0e] border border-cyber-green rounded-xl p-6 shadow-lg shadow-cyber-green/30">
-          <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full px-4 py-3 bg-[#111] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-green"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full px-4 py-3 bg-[#111] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-green"
-            />
-            <textarea
-              rows={4}
-              placeholder="Your Message"
-              className="w-full px-4 py-3 bg-[#111] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-green"
-            />
+      <div className="max-w-4xl mx-auto space-y-4">
+        {faqData.map((item, index) => (
+          <div key={index} className="border-b border-gray-700 pb-4">
             <button
-              type="submit"
-              className="w-full py-3 bg-cyber-green text-black font-bold rounded-md hover:bg-green-400 transition"
+              onClick={() => toggleFAQ(index)}
+              className="w-full flex justify-between items-center text-left text-lg font-semibold hover:text-cyber-green transition"
             >
-              Submit
+              <span>{item.question}</span>
+              {activeIndex === index ? (
+                <ChevronUp className="text-cyber-green" />
+              ) : (
+                <ChevronDown className="text-cyber-green" />
+              )}
             </button>
-          </form>
+            {activeIndex === index && (
+              <p className="mt-3 text-white text-base">{item.answer}</p>
+            )}
+          </div>
+        ))}
+
+        {/* Contact Us Button (white text) */}
+        <div className="mt-10 text-center">
+          <a
+            href="#contact"
+            className="inline-block px-6 py-3 border border-cyber-green text-white font-semibold rounded-full hover:text-cyber-green transition duration-300"
+          >
+            Have More Questions? Contact Us
+          </a>
         </div>
       </div>
     </section>
