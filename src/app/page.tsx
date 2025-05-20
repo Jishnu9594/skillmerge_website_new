@@ -7,6 +7,7 @@ import Testimonial from "@/components/Home/Testimonials";
 import ProgramHighlights from "@/components/programhighlights./program";
 import ScrollingBanner from "@/components/scrollingbanner/scrollingbaner";
 import FaqContactSection from "@/components/faq/faq";
+import WhatIsHackingSection from "@/components/youtubevideo/youtube";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "eLearning",
@@ -17,6 +18,7 @@ export default function Home() {
     <main>
       <Hero />
       <ScrollingBanner />
+      <WhatIsHackingSection />
       <ProgramHighlights />
       <Companies />
       <Courses />

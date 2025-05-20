@@ -18,6 +18,9 @@ export default function About() {
     <main>
       <AboutUsSection />
       <ScrollingBanner />
+      <ProgramHighlights />
+      <Courses />
+      <Testimonial />
     </main>
   );
 }
