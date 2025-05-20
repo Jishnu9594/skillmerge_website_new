@@ -10,6 +10,12 @@
     "predeploy": "npm run build",
     "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
   "dependencies": {
     "@iconify/icons-ion": "^1.2.10",
     "@iconify/react": "^5.0.1",
