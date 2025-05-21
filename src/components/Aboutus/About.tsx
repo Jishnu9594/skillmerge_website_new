@@ -9,48 +9,11 @@ const teamImages = [
 const AboutUsHero = () => {
   return (
     <section className="w-full min-h-screen bg-black text-white py-16 px-6 sm:px-12 md:px-16 relative overflow-hidden">
-      {/* Decorative Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0"></div>
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-20 md:gap-20 items-center justify-between mt-20">
-        {/* Left Side - Images */}
-        <div className="relative flex items-center justify-center w-full md:w-1/2 h-[400px] sm:h-[450px] md:h-[480px]">
-          {/* Left Image */}
-          <div className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:scale-105 transition-transform duration-300 z-10">
-            <Image
-              src={teamImages[0]}
-              alt="Team Left"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
-
-          {/* Center Image */}
-          <div className="relative z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110">
-            <Image
-              src={teamImages[1]}
-              alt="Team Center"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
-
-          {/* Right Image */}
-          <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:scale-105 transition-transform duration-300 z-10">
-            <Image
-              src={teamImages[2]}
-              alt="Team Right"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Right Side Content */}
+      <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col md:flex-row gap-20 md:gap-20 items-center justify-between">
+        {/* Text Content - always comes first */}
         <div className="w-full md:w-1/2 space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold border-l-4 border-green-500 pl-4 tracking-wide text-white">
             Who We Are
@@ -83,6 +46,63 @@ const AboutUsHero = () => {
             </div>
           </div>
         </div>
+
+        {/* Images */}
+        <div className="w-full md:w-1/2 relative">
+          {/* Mobile: stacked images */}
+          <div className="flex flex-col gap-6 md:hidden w-4/5 mx-auto mt-8">
+            {teamImages.map((src, idx) => (
+              <div
+                key={idx}
+                className="relative w-full h-64 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)]"
+              >
+                <Image
+                  src={src}
+                  alt={`Team ${idx}`}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: overlapping layout */}
+          <div className="hidden md:flex items-center justify-center relative h-[480px]">
+            {/* Left Image */}
+            <div className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 hover:scale-105 transition-transform duration-300">
+              <Image
+                src={teamImages[0]}
+                alt="Team Left"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+
+            {/* Center Image */}
+            <div className="z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110">
+              <Image
+                src={teamImages[1]}
+                alt="Team Center"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+
+            {/* Right Image */}
+            <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 hover:scale-105 transition-transform duration-300">
+              <Image
+                src={teamImages[2]}
+                alt="Team Right"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Down Arrow */}
@@ -93,13 +113,12 @@ const AboutUsHero = () => {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
             d="M19 9l-7 7-7-7"
-          ></path>
+          />
         </svg>
       </div>
     </section>
