@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { FaArrowDown } from "react-icons/fa";
 
 const teamImages = [
-  "/images/team1.jpg",
-  "/images/team2.jpg",
-  "/images/team3.jpg",
+  "/images/mentor/ceo.png",
+  "/images/mentor/ceo.png",
+  "/images/mentor/ceo.png",
 ];
 
 const AboutUsHero = () => {
@@ -13,12 +12,12 @@ const AboutUsHero = () => {
       {/* Decorative Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0"></div>
 
-      {/* Top margin added below to shift content down */}
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-20 md:gap-20 items-center justify-between mt-20">
         {/* Left Side - Images */}
-        <div className="relative flex items-center justify-center w-full md:w-1/2 h-[280px] sm:h-[320px] md:h-[380px]">
+        <div className="relative flex items-center justify-center w-full md:w-1/2 h-[400px] sm:h-[450px] md:h-[480px]">
           {/* Left Image */}
-          <div className="absolute left-0 top-10 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:scale-105 transition-transform duration-300">
+          <div className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:scale-105 transition-transform duration-300 z-10">
             <Image
               src={teamImages[0]}
               alt="Team Left"
@@ -29,7 +28,7 @@ const AboutUsHero = () => {
           </div>
 
           {/* Center Image */}
-          <div className="relative z-10 w-32 h-32 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110">
+          <div className="relative z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110">
             <Image
               src={teamImages[1]}
               alt="Team Center"
@@ -40,7 +39,7 @@ const AboutUsHero = () => {
           </div>
 
           {/* Right Image */}
-          <div className="absolute right-0 top-10 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:scale-105 transition-transform duration-300">
+          <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:scale-105 transition-transform duration-300 z-10">
             <Image
               src={teamImages[2]}
               alt="Team Right"
