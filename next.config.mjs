@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export", // enables static export
   images: {
-    unoptimized: true, // makes <Image> work without image optimization server
+    unoptimized: true,
   },
 };
 
