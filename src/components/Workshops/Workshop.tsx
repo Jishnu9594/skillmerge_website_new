@@ -42,7 +42,7 @@ const WorkshopSection = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <section className="relative bg-black text-white px-6 py-16 overflow-hidden">
+    <section className="relative bg-black text-white px-6 py-16 pt-28 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute w-[150%] h-[150%] bg-gradient-to-tr from-[#011A10] via-[#010D07] to-[#011A10] animate-pulse-slow opacity-20 rotate-12"></div>
@@ -133,21 +133,6 @@ const WorkshopSection = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <svg
-          className="w-8 h-8 text-[#1BD46C] animate-bounce"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
       </div>
     </section>
   );
