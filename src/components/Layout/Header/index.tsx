@@ -63,12 +63,12 @@ const Header: React.FC = () => {
               {item.name}
             </Link>
           ))}
-          <Link
-            href="/contact"
+          <a
+            href="tel:+919876543210"
             className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition"
           >
             Contact Us
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
