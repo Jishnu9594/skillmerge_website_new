@@ -167,3 +167,134 @@ export const TestimonialData: {
     rating: 5,
   },
 ];
+export const courses = [
+  {
+    slug: "cybersecurity-fundamentals",
+    title: "Cybersecurity Fundamentals",
+    hours: "120+ hours",
+    lessons: "20 lessons",
+    image: "/images/courses/cyber.jpg",
+    details:
+      "This course introduces core cybersecurity concepts, including network security, threat analysis, and cyber hygiene best practices.",
+    whatYouLearn: [
+      "Basics of cybersecurity principles",
+      "Network security fundamentals",
+      "Threat analysis and risk management",
+      "Cyber hygiene and best practices",
+    ],
+    modules: [
+      "Introduction to Cybersecurity",
+      "Network Security Basics",
+      "Threats and Vulnerabilities",
+      "Cyber Hygiene",
+      "Practical Labs",
+    ],
+  },
+  {
+    slug: "ethical-hacking-penetration-testing",
+    title: "Ethical Hacking and Penetration Testing",
+    hours: "90+ hours",
+    lessons: "18 lessons",
+    image: "/images/courses/ethical-hacking.jpg",
+    details:
+      "Dive into ethical hacking, penetration testing, vulnerability scanning, and hands-on tools like Kali Linux and Metasploit.",
+    whatYouLearn: [
+      "Ethical hacking fundamentals",
+      "Penetration testing techniques",
+      "Using Kali Linux and Metasploit",
+      "Vulnerability scanning and assessment",
+    ],
+    modules: [
+      "Ethical Hacking Overview",
+      "Penetration Testing Methodologies",
+      "Kali Linux Essentials",
+      "Metasploit Framework",
+      "Vulnerability Scanning",
+    ],
+  },
+  {
+    slug: "network-security-basics",
+    title: "Network Security Basics",
+    hours: "80+ hours",
+    lessons: "15 lessons",
+    image: "/images/courses/network-security.jpg",
+    details:
+      "Learn the fundamentals of securing computer networks, firewall configurations, VPNs, and monitoring network traffic.",
+    whatYouLearn: [
+      "Network security principles",
+      "Firewall configuration",
+      "VPN setup and management",
+      "Network traffic monitoring",
+    ],
+    modules: [
+      "Introduction to Network Security",
+      "Firewalls and Access Control",
+      "VPNs and Remote Access",
+      "Network Monitoring and Analysis",
+    ],
+  },
+  {
+    slug: "incident-response-and-forensics",
+    title: "Incident Response and Forensics",
+    hours: "70+ hours",
+    lessons: "12 lessons",
+    image: "/images/courses/incident-response.jpg",
+    details:
+      "Understand how to detect, respond, and analyze cybersecurity incidents using digital forensic techniques.",
+    whatYouLearn: [
+      "Incident detection and response",
+      "Digital forensics fundamentals",
+      "Evidence collection and preservation",
+      "Analyzing and reporting incidents",
+    ],
+    modules: [
+      "Incident Response Planning",
+      "Forensic Investigation Techniques",
+      "Data Collection and Preservation",
+      "Incident Analysis and Reporting",
+    ],
+  },
+  {
+    slug: "cloud-security-fundamentals",
+    title: "Cloud Security Fundamentals",
+    hours: "60+ hours",
+    lessons: "14 lessons",
+    image: "/images/courses/cloud-security.jpg",
+    details:
+      "Explore security principles specific to cloud environments including AWS, Azure, and Google Cloud Platform.",
+    whatYouLearn: [
+      "Cloud computing basics",
+      "Cloud security challenges",
+      "AWS, Azure, and GCP security features",
+      "Identity and access management in cloud",
+    ],
+    modules: [
+      "Introduction to Cloud Computing",
+      "Cloud Security Concepts",
+      "AWS Security Services",
+      "Azure Security Fundamentals",
+      "Google Cloud Security",
+    ],
+  },
+  {
+    slug: "security-certification-prep",
+    title: "Security Certification Preparation",
+    hours: "100+ hours",
+    lessons: "20 lessons",
+    image: "/images/courses/certification-prep.jpg",
+    details:
+      "Prepare for top cybersecurity certifications such as CompTIA Security+, CISSP, and CEH with targeted exam strategies.",
+    whatYouLearn: [
+      "Certification exam strategies",
+      "CompTIA Security+ core topics",
+      "CISSP domains overview",
+      "Certified Ethical Hacker essentials",
+    ],
+    modules: [
+      "CompTIA Security+ Preparation",
+      "CISSP Exam Domains",
+      "CEH Exam Coverage",
+      "Practice Tests and Tips",
+    ],
+  },
+];
