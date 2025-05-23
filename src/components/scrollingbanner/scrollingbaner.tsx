@@ -3,8 +3,10 @@
 import React from "react";
 
 const ScrollingBanner = () => {
+  const text = "★ 100% Practical Oriented Learning ★ 100% Placement Assistance";
+
   return (
-    <div className="relative overflow-hidden bg-black py-3 border-y border-cyber-green">
+    <div className="relative overflow-hidden bg-black py-4 border-y border-[#1BD46C]">
       <style>{`
         @keyframes scrollLeft {
           0% { transform: translateX(0%); }
@@ -14,66 +16,17 @@ const ScrollingBanner = () => {
         .scrolling-wrapper {
           display: flex;
           width: max-content;
-          animation: scrollLeft 60s linear infinite;
-        }
-
-        .font-cyber {
-          font-family: 'Orbitron', sans-serif;
+          animation: scrollLeft 35s linear infinite;
         }
       `}</style>
 
       <div className="w-full overflow-hidden">
-        <div className="scrolling-wrapper text-white text-lg font-cyber font-semibold tracking-wide">
-          <div className="flex">
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
+        <div className="scrolling-wrapper text-white text-3xl md:text-4xl font-cyber font-bold tracking-wider uppercase whitespace-nowrap">
+          {[...Array(10)].map((_, index) => (
+            <span className="mx-8" key={index}>
+              {text}
             </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            {/* Duplicate again to ensure no break */}
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-          </div>
-          {/* Clone the entire block again for seamless loop */}
-          <div className="flex">
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="mx-4">
-              *100% practical oriented learning*&nbsp;&nbsp;&nbsp;&nbsp;*100%
-              placement assistance*&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-          </div>
+          ))}
         </div>
       </div>
     </div>

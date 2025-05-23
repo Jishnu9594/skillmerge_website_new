@@ -1,7 +1,8 @@
 // app/courses/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { courses } from "@/app/api/data"; // Adjusted import path to match your data location
+import { courses } from "@/app/api/data"; // your course data
+import LeadFormModal from "@/components/Leadform/Leadform";
 
 export async function generateStaticParams() {
   return courses.map((course) => ({
@@ -29,13 +30,13 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
 
   return (
     <section className="min-h-screen pt-28 px-4 bg-black text-white relative z-10">
-      {/* Animated Background */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[150%] h-[150%] bg-gradient-to-tr from-[#011A10] via-[#010D07] to-[#011A10] animate-pulse-slow opacity-20 rotate-12" />
         <div className="absolute w-[120%] h-[120%] bg-[radial-gradient(circle,#1BD46C_1px,transparent_1px)] bg-[length:20px_20px] opacity-10 animate-movePattern" />
       </div>
 
-      {/* Course Content */}
+      {/* Course Details */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">{course.title}</h1>
 
@@ -82,19 +83,8 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
           professionals.
         </p>
 
-        <a
-          href="/docs/sample-brochure.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#1BD46C] underline mb-6 inline-block"
-        >
-          Download Course Brochure (PDF)
-        </a>
-
         <div className="mt-8">
-          <button className="bg-[#1BD46C] text-black px-6 py-3 rounded text-lg font-medium hover:bg-opacity-80 transition">
-            Apply Now
-          </button>
+          <LeadFormModal />
         </div>
       </div>
     </section>

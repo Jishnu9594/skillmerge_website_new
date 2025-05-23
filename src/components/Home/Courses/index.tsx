@@ -80,16 +80,14 @@ const Courses = () => {
   return (
     <section
       id="courses"
-      className="bg-black min-h-screen py-20 relative overflow-hidden"
+      className="bg-black min-h-screen py-20 relative overflow-hidden font-blog"
     >
       {/* === Custom Styles === */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-        .font-futuristic {
-          font-family: 'Orbitron', sans-serif;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
+        .font-blog {
+          font-family: 'Inter', sans-serif;
         }
 
         .text-cyber-green {
@@ -114,12 +112,12 @@ const Courses = () => {
       {/* === Content === */}
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 relative z-10">
         <div className="sm:flex justify-between items-center mb-20">
-          <h2 className="font-futuristic text-white text-4xl lg:text-5xl font-bold mb-5 sm:mb-0">
+          <h2 className="text-white text-4xl lg:text-5xl font-bold mb-5 sm:mb-0 font-blog">
             Popular Courses
           </h2>
           <Link
             href="/"
-            className="text-white font-futuristic text-lg font-semibold hover:text-[#00cc7a] transition-colors duration-300"
+            className="text-white text-lg font-semibold hover:text-[#00cc7a] transition-colors duration-300 font-blog"
           >
             Explore Courses &gt;
           </Link>
@@ -138,7 +136,7 @@ const Courses = () => {
                     className="m-auto rounded-xl"
                   />
                   <div className="absolute right-5 -bottom-2 bg-[#008755] rounded-full p-6">
-                    <h3 className="text-white uppercase text-center text-sm font-medium">
+                    <h3 className="text-white uppercase text-center text-sm font-medium font-blog">
                       best <br />
                       seller
                     </h3>
@@ -148,25 +146,25 @@ const Courses = () => {
                 <div className="px-3 pt-6">
                   <Link
                     href="#"
-                    className="text-white text-2xl font-bold max-w-[75%] inline-block"
+                    className="text-white text-2xl font-bold max-w-[75%] inline-block font-blog"
                   >
                     {items.heading}
                   </Link>
-                  <h3 className="text-white text-base font-normal pt-6 opacity-90">
+                  <h3 className="text-white text-base font-normal pt-6 opacity-90 font-blog">
                     {items.name}
                   </h3>
                   <div className="flex justify-between items-center py-6 border-b border-cyber-green">
                     <div className="flex items-center gap-4">
-                      <h3 className="text-[#00cc7a] text-2xl font-medium">
+                      <h3 className="text-[#00cc7a] text-2xl font-medium font-blog">
                         {items.rating}
                       </h3>
                       <div className="flex">{renderStars(items.rating)}</div>
                     </div>
-                    <h3 className="text-white text-3xl font-medium">
+                    <h3 className="text-white text-3xl font-medium font-blog">
                       ${items.price}
                     </h3>
                   </div>
-                  <div className="flex justify-between pt-6">
+                  <div className="flex justify-between pt-6 font-blog">
                     <div className="flex gap-4">
                       <Icon
                         icon="solar:notebook-minimalistic-outline"

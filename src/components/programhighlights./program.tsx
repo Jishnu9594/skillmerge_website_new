@@ -53,12 +53,12 @@ const cardVariants = {
 
 export default function ProgramHighlights() {
   return (
-    <section className="relative py-20 px-6 md:px-16 overflow-hidden bg-black text-green-400">
+    <section className="relative py-20 px-6 md:px-16 overflow-hidden bg-black text-white">
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 text-white">
           Program Highlights
         </h2>
-        <p className="text-lg text-green-300 mb-12 max-w-3xl mx-auto">
+        <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
           Our comprehensive program is designed to transform beginners into
           industry-ready cybersecurity professionals.
         </p>
@@ -87,7 +87,7 @@ export default function ProgramHighlights() {
                 <h3 className="text-lg font-semibold mb-1 text-white">
                   {item.title}
                 </h3>
-                <p className="text-sm text-green-300">{item.description}</p>
+                <p className="text-sm text-white">{item.description}</p>
               </div>
             </motion.div>
           ))}

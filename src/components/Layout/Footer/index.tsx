@@ -78,7 +78,8 @@ const Footer = () => {
                 className="text-green-400 text-3xl inline-block"
               />
               <h5 className="text-lg text-gray-400">
-                925 Filbert Street Pennsylvania 18072
+                Q1 Mall by Nippon Q1 , Chakkalakkal, Service Rd East, NH 66,
+                Palarivattom, Vennala, Kochi, Kerala 682028
               </h5>
             </div>
             <div className="flex items-center gap-2">
@@ -86,7 +87,7 @@ const Footer = () => {
                 icon="tabler:phone"
                 className="text-green-400 text-3xl inline-block"
               />
-              <h5 className="text-lg text-gray-400">+45 3411-4411</h5>
+              <h5 className="text-lg text-gray-400">+91 90379 37434</h5>
             </div>
             <div className="flex items-center gap-2">
               <Icon
@@ -103,11 +104,11 @@ const Footer = () => {
           <h4 className="text-center lg:text-left font-normal">
             &copy; 2025 Agency. All Rights Reserved by{" "}
             <Link
-              href="https://getnextjstemplates.com/"
+              href="#"
               target="_blank"
               className="hover:text-green-400 transition-colors"
             >
-              GetNextJsTemplates.com
+              Expert's Skill Merge Hub PVT LTD
             </Link>
           </h4>
           <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
@@ -119,14 +120,11 @@ const Footer = () => {
             </Link>
           </div>
           <h4 className="text-center lg:text-left font-normal">
-            Distributed by{" "}
             <Link
-              href="https://themewagon.com/"
+              href="#"
               target="_blank"
               className="hover:text-green-400 transition-colors"
-            >
-              ThemeWagon
-            </Link>
+            ></Link>
           </h4>
         </div>
       </div>

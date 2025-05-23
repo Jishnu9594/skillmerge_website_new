@@ -15,14 +15,18 @@ const FoundersNote = () => {
 
   return (
     <section
-      className="relative overflow-hidden bg-black py-24"
+      className="relative overflow-hidden bg-black py-24 font-blog"
       id="founder-note"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-        .font-futuristic {
-          font-family: 'Orbitron', sans-serif;
+        .font-blog {
+          font-family: 'Inter', sans-serif;
+        }
+
+        .text-cyber-green {
+          color: #00ff99;
         }
 
         .animated-bg {
@@ -38,8 +42,8 @@ const FoundersNote = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-white font-futuristic text-4xl lg:text-5xl font-bold text-center mb-20">
-          Founder’s Note
+        <h2 className="text-white text-4xl lg:text-5xl font-bold text-center mb-20">
+          Founder Note
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

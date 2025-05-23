@@ -74,7 +74,7 @@ const Testimonial = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-12 tracking-wider">
-          What Our Clients Say
+          What Our Students Say
         </h2>
 
         <Slider {...settings}>
