@@ -10,13 +10,15 @@ import FaqContactSection from "@/components/faq/faq";
 import { Metadata } from "next";
 import CoursesHero from "@/components/Cousres/cousres";
 import WorkshopSection from "@/components/Workshops/Workshop";
+import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Skillmerge |Workshop",
 };
 
 export default function Course() {
   return (
     <main>
+      <WhatsAppButton />
       <WorkshopSection />
       <ScrollingBanner />
       <ProgramHighlights />

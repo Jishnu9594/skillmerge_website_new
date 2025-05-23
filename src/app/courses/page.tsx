@@ -9,13 +9,15 @@ import ScrollingBanner from "@/components/scrollingbanner/scrollingbaner";
 import FaqContactSection from "@/components/faq/faq";
 import { Metadata } from "next";
 import CoursesHero from "@/components/Cousres/cousres";
+import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Skillmerge | Cousres",
 };
 
 export default function Course() {
   return (
     <main>
+      <WhatsAppButton />
       <CoursesHero />
       <ScrollingBanner />
       <ProgramHighlights />

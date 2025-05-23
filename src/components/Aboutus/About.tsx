@@ -1,10 +1,53 @@
 import Image from "next/image";
+import { Linkedin, Instagram } from "lucide-react";
 
-const teamImages = [
-  "/images/mentor/ceo.png",
-  "/images/mentor/ceo.png",
-  "/images/mentor/ceo.png",
+const teamMembers = [
+  {
+    src: "/images/mentor/ceo.png",
+    name: "CEO",
+    linkedin: "https://linkedin.com/in/your-ceo",
+    instagram: "https://instagram.com/your-ceo",
+  },
+  {
+    src: "/images/mentor/ceo.png",
+    name: "CTO",
+    linkedin: "https://linkedin.com/in/your-cto",
+    instagram: "https://instagram.com/your-cto",
+  },
+  {
+    src: "/images/mentor/ceo.png",
+    name: "CFO",
+    linkedin: "https://linkedin.com/in/your-cfo",
+    instagram: "https://instagram.com/your-cfo",
+  },
 ];
+
+const SocialOverlay = ({
+  linkedin,
+  instagram,
+}: {
+  linkedin: string;
+  instagram: string;
+}) => (
+  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center gap-6 opacity-0 hover:opacity-100 transition-opacity duration-300 z-30">
+    <a
+      href={linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white hover:text-green-400 transition"
+    >
+      <Linkedin size={28} />
+    </a>
+    <a
+      href={instagram}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white hover:text-pink-400 transition"
+    >
+      <Instagram size={28} />
+    </a>
+  </div>
+);
 
 const AboutUsHero = () => {
   return (
@@ -12,8 +55,8 @@ const AboutUsHero = () => {
       {/* Background Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col md:flex-row gap-20 md:gap-20 items-center justify-between">
-        {/* Text Content - always comes first */}
+      <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col md:flex-row gap-20 items-center justify-between">
+        {/* Text Section */}
         <div className="w-full md:w-1/2 space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold border-l-4 border-green-500 pl-4 tracking-wide text-white">
             Who We Are
@@ -47,58 +90,74 @@ const AboutUsHero = () => {
           </div>
         </div>
 
-        {/* Images */}
+        {/* Image Section */}
         <div className="w-full md:w-1/2 relative">
-          {/* Mobile: stacked images */}
+          {/* Mobile Layout */}
           <div className="flex flex-col gap-6 md:hidden w-4/5 mx-auto mt-8">
-            {teamImages.map((src, idx) => (
+            {teamMembers.map((member, idx) => (
               <div
                 key={idx}
-                className="relative w-full h-64 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)]"
+                className="relative w-full h-64 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] group"
               >
                 <Image
-                  src={src}
+                  src={member.src}
                   alt={`Team ${idx}`}
                   fill
                   style={{ objectFit: "cover" }}
                   priority
                 />
+                <SocialOverlay
+                  linkedin={member.linkedin}
+                  instagram={member.instagram}
+                />
               </div>
             ))}
           </div>
 
-          {/* Desktop: overlapping layout */}
+          {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-center relative h-[480px]">
-            {/* Left Image */}
-            <div className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 hover:scale-105 transition-transform duration-300">
+            {/* Left */}
+            <div className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 group hover:scale-105 transition-transform duration-300">
               <Image
-                src={teamImages[0]}
+                src={teamMembers[0].src}
                 alt="Team Left"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
               />
+              <SocialOverlay
+                linkedin={teamMembers[0].linkedin}
+                instagram={teamMembers[0].instagram}
+              />
             </div>
 
-            {/* Center Image */}
-            <div className="z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110">
+            {/* Center */}
+            <div className="z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110 group relative">
               <Image
-                src={teamImages[1]}
+                src={teamMembers[1].src}
                 alt="Team Center"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
               />
+              <SocialOverlay
+                linkedin={teamMembers[1].linkedin}
+                instagram={teamMembers[1].instagram}
+              />
             </div>
 
-            {/* Right Image */}
-            <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 hover:scale-105 transition-transform duration-300">
+            {/* Right */}
+            <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 group hover:scale-105 transition-transform duration-300">
               <Image
-                src={teamImages[2]}
+                src={teamMembers[2].src}
                 alt="Team Right"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
+              />
+              <SocialOverlay
+                linkedin={teamMembers[2].linkedin}
+                instagram={teamMembers[2].instagram}
               />
             </div>
           </div>

@@ -8,14 +8,17 @@ import ProgramHighlights from "@/components/programhighlights./program";
 import ScrollingBanner from "@/components/scrollingbanner/scrollingbaner";
 import FaqContactSection from "@/components/faq/faq";
 import WhatIsHackingSection from "@/components/youtubevideo/youtube";
+import GalleryCarousel from "@/components/Gallery/Gallery";
+import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Skillmerge",
 };
 
 export default function Home() {
   return (
     <main>
+      <WhatsAppButton />
       <Hero />
       <ScrollingBanner />
       <WhatIsHackingSection />
@@ -26,6 +29,7 @@ export default function Home() {
       <ScrollingBanner />
       <FaqContactSection />
       <Testimonial />
+      <GalleryCarousel />
       <ScrollingBanner />
     </main>
   );

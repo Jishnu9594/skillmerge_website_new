@@ -8,14 +8,16 @@ import ProgramHighlights from "@/components/programhighlights./program";
 import ScrollingBanner from "@/components/scrollingbanner/scrollingbaner";
 import FaqContactSection from "@/components/faq/faq";
 import AboutUsSection from "@/components/Aboutus/About";
+import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Skillmerge | About Us",
 };
 
 export default function About() {
   return (
     <main>
+      <WhatsAppButton />
       <AboutUsSection />
       <ScrollingBanner />
       <ProgramHighlights />
