@@ -21,7 +21,7 @@ const WhatIsHackingSection = () => {
         <div className="relative pt-[56.25%] w-full rounded-xl border-2 border-green-500 shadow-[0_0_30px_rgba(0,255,0,0.3)] overflow-hidden">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/yFC8pb2TPdc"
+            src="https://www.youtube.com/embed/_0QCvSg75DI"
             title="What is Hacking"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

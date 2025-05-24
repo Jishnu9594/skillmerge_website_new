@@ -1,7 +1,7 @@
 // app/courses/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { courses } from "@/app/api/data"; // your course data
+import { courses } from "@/app/api/data";
 import LeadFormModal from "@/components/Leadform/Leadform";
 
 export async function generateStaticParams() {
@@ -70,18 +70,12 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
         <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">
           Career Opportunities
         </h2>
-        <p className="text-gray-300 mb-6">
-          Graduates can pursue roles like Security Analyst, Penetration Tester,
-          Incident Responder, and more.
-        </p>
+        <p className="text-gray-300 mb-6">{course.careerOpportunities}</p>
 
         <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">
           Certificate Overview
         </h2>
-        <p className="text-gray-300 mb-6">
-          On successful completion, receive a certificate recognized by industry
-          professionals.
-        </p>
+        <p className="text-gray-300 mb-6">{course.certificate}</p>
 
         <div className="mt-8">
           <LeadFormModal />

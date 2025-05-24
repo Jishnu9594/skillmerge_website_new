@@ -189,6 +189,10 @@ export const courses = [
       "Cyber Hygiene",
       "Practical Labs",
     ],
+    careerOpportunities:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum(The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    certificate:
+      "Certificate of Completion recognized by industry professionals in cybersecurity.",
   },
   {
     slug: "ethical-hacking-penetration-testing",
@@ -211,6 +215,10 @@ export const courses = [
       "Metasploit Framework",
       "Vulnerability Scanning",
     ],
+    careerOpportunities:
+      "Penetration Tester, Ethical Hacker, Red Team Specialist, Vulnerability Analyst.",
+    certificate:
+      "Industry-recognized Certificate in Ethical Hacking and Penetration Testing.",
   },
   {
     slug: "network-security-basics",
@@ -232,6 +240,9 @@ export const courses = [
       "VPNs and Remote Access",
       "Network Monitoring and Analysis",
     ],
+    careerOpportunities:
+      "Network Administrator, Security Operations Center (SOC) Analyst, IT Support Engineer.",
+    certificate: "Certificate of Completion in Network Security Fundamentals.",
   },
   {
     slug: "incident-response-and-forensics",
@@ -253,6 +264,9 @@ export const courses = [
       "Data Collection and Preservation",
       "Incident Analysis and Reporting",
     ],
+    careerOpportunities:
+      "Incident Responder, Digital Forensics Analyst, Cyber Threat Analyst.",
+    certificate: "Professional Certificate in Incident Response and Forensics.",
   },
   {
     slug: "cloud-security-fundamentals",
@@ -275,6 +289,9 @@ export const courses = [
       "Azure Security Fundamentals",
       "Google Cloud Security",
     ],
+    careerOpportunities:
+      "Cloud Security Engineer, Cloud Architect, DevSecOps Engineer.",
+    certificate: "Certificate in Cloud Security Fundamentals upon completion.",
   },
   {
     slug: "security-certification-prep",
@@ -296,5 +313,9 @@ export const courses = [
       "CEH Exam Coverage",
       "Practice Tests and Tips",
     ],
+    careerOpportunities:
+      "Security+ Certified Analyst, CISSP Professional, CEH Ethical Hacker, InfoSec Manager.",
+    certificate:
+      "Certificate of Completion and exam readiness badge for Security+, CISSP, and CEH.",
   },
 ];

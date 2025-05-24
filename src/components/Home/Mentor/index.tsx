@@ -8,7 +8,7 @@ const FoundersNote = () => {
   const founder = {
     name: "Jane Doe",
     profession: "Founder & CEO",
-    imgSrc: "images/mentor/jane.jpg",
+    imgSrc: "/images/mentor/ceo.png",
     note: "At our core, we believe cybersecurity is not just about defense—it's about empowerment. Through our platform, we strive to educate and equip the next generation of digital guardians.",
     linkedin: "images/mentor/linkedin.svg",
   };
