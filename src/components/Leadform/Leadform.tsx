@@ -1,7 +1,6 @@
-// app/components/LeadFormModal.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 
 export default function LeadFormModal() {
   const [showModal, setShowModal] = useState(false);
@@ -15,17 +14,18 @@ export default function LeadFormModal() {
 
   useEffect(() => {
     if (showModal) {
-      document.body.style.overflow = "hidden"; // Prevent background scroll
+      document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [showModal]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-
-    console.log("Lead Submitted:", formData);
-
     setFormSubmitted(true);
 
     setTimeout(() => {
@@ -46,74 +46,48 @@ export default function LeadFormModal() {
       </button>
 
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 z-[9999] flex justify-center items-center">
-          <div className="bg-white text-black p-6 rounded-lg w-full max-w-md mx-4 relative shadow-lg">
+        <div className="fixed inset-0 z-[99999] bg-black bg-opacity-70 backdrop-blur-sm overflow-y-auto flex items-center justify-center px-4 py-10">
+          <div className="relative bg-white text-black p-8 rounded-xl w-full max-w-xl shadow-2xl z-[999999]">
             <button
-              className="absolute top-3 right-4 text-2xl font-bold text-gray-700 hover:text-red-600"
               onClick={() => setShowModal(false)}
+              className="absolute top-4 right-4 text-2xl font-bold text-gray-700 hover:text-red-500"
             >
               &times;
             </button>
-            <h2 className="text-2xl font-semibold mb-4 text-center">
+
+            <h2 className="text-3xl font-semibold mb-6 text-center">
               Download Course Brochure
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block mb-1 text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  required
-                  className="w-full border px-4 py-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  required
-                  className="w-full border px-4 py-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 text-sm font-medium">Phone</label>
-                <input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  required
-                  className="w-full border px-4 py-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 text-sm font-medium">
-                  Qualification
-                </label>
-                <input
-                  type="text"
-                  value={formData.qualification}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      qualification: e.target.value,
-                    })
-                  }
-                  required
-                  className="w-full border px-4 py-2 rounded"
-                />
-              </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <Input
+                label="Name"
+                value={formData.name}
+                onChange={(val) => setFormData({ ...formData, name: val })}
+              />
+              <Input
+                label="Email"
+                type="email"
+                value={formData.email}
+                onChange={(val) => setFormData({ ...formData, email: val })}
+              />
+              <Input
+                label="Phone"
+                type="tel"
+                value={formData.phone}
+                onChange={(val) => setFormData({ ...formData, phone: val })}
+              />
+              <Input
+                label="Qualification"
+                value={formData.qualification}
+                onChange={(val) =>
+                  setFormData({ ...formData, qualification: val })
+                }
+              />
+
               <button
                 type="submit"
-                className="w-full bg-[#1BD46C] text-black py-2 rounded font-semibold"
+                className="w-full bg-[#1BD46C] text-black py-3 rounded font-semibold hover:bg-opacity-90 transition"
               >
                 {formSubmitted ? "Submitting..." : "Submit & Download"}
               </button>
@@ -122,5 +96,27 @@ export default function LeadFormModal() {
         </div>
       )}
     </>
+  );
+}
+
+type InputProps = {
+  label: string;
+  type?: string;
+  value: string;
+  onChange: (val: string) => void;
+};
+
+function Input({ label, type = "text", value, onChange }: InputProps) {
+  return (
+    <div>
+      <label className="block mb-1 text-sm font-medium">{label}</label>
+      <input
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        required
+        className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+      />
+    </div>
   );
 }

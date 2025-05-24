@@ -23,6 +23,7 @@ export default function About() {
       <ProgramHighlights />
       <Courses />
       <Testimonial />
+      <ScrollingBanner />
     </main>
   );
 }

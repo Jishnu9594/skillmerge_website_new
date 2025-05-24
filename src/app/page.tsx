@@ -11,8 +11,12 @@ import WhatIsHackingSection from "@/components/youtubevideo/youtube";
 import GalleryCarousel from "@/components/Gallery/Gallery";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Skillmerge",
+  title: "Skillmerge | Home",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function Home() {
