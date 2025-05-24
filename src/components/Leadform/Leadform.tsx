@@ -18,22 +18,45 @@ export default function LeadFormModal() {
     } else {
       document.body.style.overflow = "auto";
     }
-
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [showModal]);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setFormSubmitted(true);
 
-    setTimeout(() => {
-      window.open("/images/documentation/AI ML poster content.pdf", "_blank");
-      setShowModal(false);
+    try {
+      const res = await fetch("/api/send-inquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setTimeout(() => {
+          window.open(
+            "/images/documentation/AI ML poster content.pdf",
+            "_blank"
+          );
+          setShowModal(false);
+          setFormSubmitted(false);
+          setFormData({ name: "", email: "", phone: "", qualification: "" });
+        }, 1000);
+      } else {
+        const result = await res.json();
+        console.error("Email failed:", result.error);
+        alert("Submission failed. Please try again.");
+        setFormSubmitted(false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong.");
       setFormSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", qualification: "" });
-    }, 1000);
+    }
   };
 
   return (

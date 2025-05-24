@@ -40,33 +40,62 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [letterIndex, isDeleting, currentWordIndex]);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      qualification: formData.get("qualification") as string,
+    };
+
+    try {
+      const res = await fetch("/api/send-inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        alert("Inquiry sent successfully!");
+        form.reset();
+      } else {
+        alert("Failed to send inquiry.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    }
+  };
+
   return (
     <section
       id="home-section"
       className="relative bg-[#010D07] text-white overflow-hidden"
     >
-      {/* Cybersecurity Grid Background */}
+      {/* Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="w-full h-full bg-[radial-gradient(circle,#00ff88_1px,transparent_1px)] [background-size:24px_24px] opacity-5 animate-pulse" />
         <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-green-800/10 animate-[pulse_10s_ease-in-out_infinite]" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto lg:max-w-screen-xl px-4 py-28 flex flex-col justify-center min-h-[80vh]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Content */}
+          {/* Left Side */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <span className="bg-[#0A2218] text-[#70EF9C] px-4 py-2 rounded-full text-sm font-semibold w-fit">
               Become an Ethical Hacker
             </span>
 
             <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
-              Certified{" "}
               <span className="text-[#1BD46C]">
                 {displayedText}
                 <span className="blinking-cursor">|</span>
               </span>{" "}
-              Specialist (CCS) Program
+              Kerala's 1st Hands-On Cybersecurity Training Institute
             </h1>
 
             <p className="text-gray-400 text-lg max-w-xl">
@@ -100,7 +129,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Form */}
+          {/* Form Side */}
           <div className="lg:col-span-5 bg-[#0A2218] p-8 rounded-xl shadow-lg">
             <h2 className="text-white text-xl font-semibold mb-4 text-center">
               Get a free consultation Today
@@ -110,20 +139,36 @@ const Hero = () => {
               consultation.
             </p>
 
-            <form className="flex flex-col gap-4">
-              {[
-                "Full Name",
-                "Email Address",
-                "Phone Number",
-                "Your Highest Qualification",
-              ].map((placeholder, index) => (
-                <input
-                  key={index}
-                  type={index === 1 ? "email" : index === 2 ? "tel" : "text"}
-                  placeholder={placeholder}
-                  className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
-                />
-              ))}
+            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+              />
+              <input
+                type="text"
+                name="qualification"
+                placeholder="Your Highest Qualification"
+                required
+                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+              />
+
               <button
                 type="submit"
                 className="bg-[#1BD46C] hover:bg-[#16b55b] text-black font-semibold py-3 rounded-md"
@@ -135,7 +180,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Down Arrow Indicator */}
+      {/* Scroll Icon */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <svg
           className="w-8 h-8 text-[#1BD46C] animate-bounce"
@@ -143,17 +188,16 @@ const Hero = () => {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
             d="M19 9l-7 7-7-7"
-          ></path>
+          />
         </svg>
       </div>
 
-      {/* Extra Tailwind CSS for blinking cursor */}
+      {/* Cursor Animation */}
       <style>{`
         .blinking-cursor {
           font-weight: 100;
