@@ -2,15 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { getImagePrefix } from "@/utils/util";
 
 const FoundersNote = () => {
   const founder = {
     name: "MUHAMMAD ASHIQUE",
     profession: "Founder & CTO, Skillmerge",
-    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png", // Make sure this is in /public/images/mentor/
     note: "At our core, we believe cybersecurity is a path to empowerment—not just protection. Our mission is to inspire, educate, and equip tomorrow’s cyber defenders through hands-on learning and real-world experience.",
-    linkedin: "images/mentor/linkedin.svg",
+    linkedin: "/images/mentor/linkedin.svg", // Also must be inside /public/images/mentor/
   };
 
   return (
@@ -64,7 +63,7 @@ const FoundersNote = () => {
           <div className="relative w-full flex justify-center">
             <div className="relative z-10">
               <Image
-                src={`${getImagePrefix()}${founder.imgSrc}`}
+                src={founder.imgSrc}
                 alt="founder"
                 width={280}
                 height={280}
@@ -73,7 +72,7 @@ const FoundersNote = () => {
               {/* LinkedIn Icon */}
               <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-md">
                 <Image
-                  src={`${getImagePrefix()}${founder.linkedin}`}
+                  src={founder.linkedin}
                   alt="linkedin"
                   width={20}
                   height={20}
