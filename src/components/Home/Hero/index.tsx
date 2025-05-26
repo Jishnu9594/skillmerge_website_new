@@ -46,10 +46,10 @@ const Hero = () => {
 
     emailjs
       .sendForm(
-        "service_j9yjjp5",
-        "template_5ubkxxo",
+        "service_j9yjjp5", // Replace with your EmailJS service ID
+        "template_5ubkxxo", // Replace with your EmailJS template ID
         e.currentTarget,
-        "UKlZisTZGOT0L9gg"
+        "UKlZisTZGOT0L9ggF" // Replace with your EmailJS public key
       )
       .then(
         (result) => {
@@ -66,7 +66,7 @@ const Hero = () => {
   return (
     <section
       id="home-section"
-      className="relative bg-[#010D07] text-white overflow-hidden font-inter"
+      className="relative bg-[#010D07] text-white overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
