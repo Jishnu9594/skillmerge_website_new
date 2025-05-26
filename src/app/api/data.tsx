@@ -1,11 +1,20 @@
 export const TrustedCompanies = [
   { imgSrc: "/images/companies/jbc.png", name: "JBC" },
-  { imgSrc: "/images/companies/fedex.svg", name: "FedEx" },
-  { imgSrc: "/images/companies/google.svg", name: "Google" },
-  { imgSrc: "/images/companies/hubspot.svg", name: "HubSpot" },
-  { imgSrc: "/images/companies/microsoft.svg", name: "Microsoft" },
-  { imgSrc: "/images/companies/walmart.svg", name: "Walmart" },
-  { imgSrc: "/images/companies/airbnb.svg", name: "Airbnb" },
+  { imgSrc: "/images/companies/eme-logo (1).png", name: "EME" },
+  { imgSrc: "/images/companies/Final-Logo-09.png", name: "techcolud" },
+  {
+    imgSrc:
+      "/images/companies/globosoft_technology_solutions_logo-removebg-preview.png",
+    name: "gobosoft",
+  },
+  { imgSrc: "/images/companies/nergy-vidya-logo.svg", name: "nergy" },
+  {
+    imgSrc: "/images/companies/nexus-removebg-preview.png",
+    name: "purplenexus",
+  },
+  { imgSrc: "/images/companies/wh_lg-1024x651.png", name: "neogenmedia" },
+  { imgSrc: "/images/companies/ishakan.png", name: "ishakan" },
+  { imgSrc: "/images/companies/innovatexlogo.png", name: "innovatexlabs" },
 ];
 
 export const courseData: {
