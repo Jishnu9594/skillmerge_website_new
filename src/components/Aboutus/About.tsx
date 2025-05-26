@@ -3,57 +3,62 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const teamMembers = [
   {
-    src: "/images/mentor/ceo.png",
-    name: "CEO",
-    linkedin: "https://linkedin.com/in/your-ceo",
-    instagram: "https://instagram.com/your-ceo",
+    src: "/images/mentor/nishi-removebg-preview (1).png",
+    name: "Nishal – CEO",
+    linkedin: "https://www.linkedin.com/in/nishalll/",
+    instagram: "https://www.instagram.com/nishhaaallll",
   },
   {
-    src: "/images/mentor/ceo.png",
-    name: "CTO",
-    linkedin: "https://linkedin.com/in/your-cto",
-    instagram: "https://instagram.com/your-cto",
+    src: "/images/mentor/ashi-removebg-preview (1).png",
+    name: "Ashique – Founder & CTO",
+    linkedin: "https://www.linkedin.com/in/ashq/",
+    instagram: "https://www.instagram.com/ashique.exe",
   },
   {
-    src: "/images/mentor/ceo.png",
-    name: "CFO",
-    linkedin: "https://linkedin.com/in/your-cfo",
-    instagram: "https://instagram.com/your-cfo",
+    src: "/images/mentor/sha-removebg-preview (1).png",
+    name: "Shammas – CFO",
+    linkedin: "https://www.linkedin.com/in/muhammedshammasmc/",
+    instagram: "https://www.instagram.com/shammmaaaas._",
   },
 ];
 
 const SocialOverlay = ({
   linkedin,
   instagram,
+  name,
 }: {
   linkedin: string;
   instagram: string;
+  name: string;
 }) => (
-  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center gap-6 opacity-0 hover:opacity-100 transition-opacity duration-300 z-30">
-    <a
-      href={linkedin}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-white hover:text-green-400 transition"
-    >
-      <Linkedin size={28} />
-    </a>
-    <a
-      href={instagram}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-white hover:text-pink-400 transition"
-    >
-      <Instagram size={28} />
-    </a>
+  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 text-white">
+    <div className="flex gap-6">
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-green-400 transition"
+      >
+        <Linkedin size={28} />
+      </a>
+      <a
+        href={instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-pink-400 transition"
+      >
+        <Instagram size={28} />
+      </a>
+    </div>
+    <p className="mt-2 text-sm font-semibold text-white">{name}</p>
   </div>
 );
 
 const AboutUsHero = () => {
   return (
     <section className="w-full min-h-screen bg-black text-white py-16 px-6 sm:px-12 md:px-16 relative overflow-hidden">
-      {/* Background Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
+      {/* Decorative Grid Background (increased height) */}
+      <div className="absolute inset-0 min-h-[150%] bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col md:flex-row gap-20 items-center justify-between">
         {/* Text Section */}
@@ -103,12 +108,13 @@ const AboutUsHero = () => {
                   src={member.src}
                   alt={`Team ${idx}`}
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                   priority
                 />
                 <SocialOverlay
                   linkedin={member.linkedin}
                   instagram={member.instagram}
+                  name={member.name}
                 />
               </div>
             ))}
@@ -122,12 +128,13 @@ const AboutUsHero = () => {
                 src={teamMembers[0].src}
                 alt="Team Left"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
                 priority
               />
               <SocialOverlay
                 linkedin={teamMembers[0].linkedin}
                 instagram={teamMembers[0].instagram}
+                name={teamMembers[0].name}
               />
             </div>
 
@@ -137,12 +144,13 @@ const AboutUsHero = () => {
                 src={teamMembers[1].src}
                 alt="Team Center"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
                 priority
               />
               <SocialOverlay
                 linkedin={teamMembers[1].linkedin}
                 instagram={teamMembers[1].instagram}
+                name={teamMembers[1].name}
               />
             </div>
 
@@ -152,12 +160,13 @@ const AboutUsHero = () => {
                 src={teamMembers[2].src}
                 alt="Team Right"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
                 priority
               />
               <SocialOverlay
                 linkedin={teamMembers[2].linkedin}
                 instagram={teamMembers[2].instagram}
+                name={teamMembers[2].name}
               />
             </div>
           </div>

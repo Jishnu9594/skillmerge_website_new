@@ -8,7 +8,7 @@ const FoundersNote = () => {
   const founder = {
     name: "MUHAMMAD ASHIQUE",
     profession: "Founder & CTO, Skillmerge",
-    imgSrc: "/images/mentor/ceo.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
     note: "At our core, we believe cybersecurity is a path to empowerment—not just protection. Our mission is to inspire, educate, and equip tomorrow’s cyber defenders through hands-on learning and real-world experience.",
     linkedin: "images/mentor/linkedin.svg",
   };
