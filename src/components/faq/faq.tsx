@@ -29,11 +29,6 @@ const faqData = [
     answer:
       "Yes, we offer full placement support including resume reviews and interview preparation.",
   },
-  {
-    question: "Are there financing options available?",
-    answer:
-      "Yes. We provide installment plans, scholarships for underrepresented groups, and income share agreements.",
-  },
 ];
 
 const FaqContactSection = () => {

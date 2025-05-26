@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
+import emailjs from "emailjs-com";
 
 const rotatingWords = [
   "Cybersecurity",
@@ -42,33 +43,24 @@ const Hero = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
 
-    const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      phone: formData.get("phone") as string,
-      qualification: formData.get("qualification") as string,
-    };
-
-    try {
-      const res = await fetch("/api/send-inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        alert("Inquiry sent successfully!");
-        form.reset();
-      } else {
-        alert("Failed to send inquiry.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Something went wrong.");
-    }
+    emailjs
+      .sendForm(
+        "service_j9yjjp5", // Replace with your EmailJS service ID
+        "template_5ubkxxo", // Replace with your EmailJS template ID
+        e.currentTarget,
+        "UKlZisTZGOT0L9ggF" // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Inquiry sent successfully!");
+          e.currentTarget.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send inquiry.");
+        }
+      );
   };
 
   return (
@@ -95,12 +87,14 @@ const Hero = () => {
                 {displayedText}
                 <span className="blinking-cursor">|</span>
               </span>{" "}
-              Kerala's 1st Hands-On Cybersecurity Training Institute
+              Kerala’s 1st Fully Practical Oriented Cybersecurity Training
+              Institute
             </h1>
 
             <p className="text-gray-400 text-lg max-w-xl">
-              Master the art of ethical hacking and launch your career in the
-              high-demand field of cybersecurity.
+              Join Kerala’s 1st Hands-On Cybersecurity Training Institute and
+              gain real-world skills to kickstart your career in ethical hacking
+              and cybersecurity.
             </p>
 
             <div className="flex flex-wrap gap-4">

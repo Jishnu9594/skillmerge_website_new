@@ -1,4 +1,5 @@
 // app/courses/[slug]/page.tsx
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { courses } from "@/app/api/data";

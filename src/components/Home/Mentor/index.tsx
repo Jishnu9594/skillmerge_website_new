@@ -6,10 +6,10 @@ import { getImagePrefix } from "@/utils/util";
 
 const FoundersNote = () => {
   const founder = {
-    name: "Jane Doe",
-    profession: "Founder & CEO",
+    name: "MUHAMMAD ASHIQUE",
+    profession: "Founder & CTO, Skillmerge",
     imgSrc: "/images/mentor/ceo.png",
-    note: "At our core, we believe cybersecurity is not just about defense—it's about empowerment. Through our platform, we strive to educate and equip the next generation of digital guardians.",
+    note: "At our core, we believe cybersecurity is a path to empowerment—not just protection. Our mission is to inspire, educate, and equip tomorrow’s cyber defenders through hands-on learning and real-world experience.",
     linkedin: "images/mentor/linkedin.svg",
   };
 

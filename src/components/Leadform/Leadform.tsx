@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function LeadFormModal() {
   const [showModal, setShowModal] = useState(false);
@@ -12,12 +13,13 @@ export default function LeadFormModal() {
     qualification: "",
   });
 
+  // Hardcoded EmailJS config
+  const serviceId = "service_j9yjjp5";
+  const templateId = "template_5ubkxxo";
+  const publicKey = "UKlZisTZGOT0L9ggF";
+
   useEffect(() => {
-    if (showModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = showModal ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -28,33 +30,29 @@ export default function LeadFormModal() {
     setFormSubmitted(true);
 
     try {
-      const res = await fetch("/api/send-inquiry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          qualification: formData.qualification,
         },
-        body: JSON.stringify(formData),
-      });
+        publicKey
+      );
 
-      if (res.ok) {
-        setTimeout(() => {
-          window.open(
-            "/images/documentation/AI ML poster content.pdf",
-            "_blank"
-          );
-          setShowModal(false);
-          setFormSubmitted(false);
-          setFormData({ name: "", email: "", phone: "", qualification: "" });
-        }, 1000);
-      } else {
-        const result = await res.json();
-        console.error("Email failed:", result.error);
-        alert("Submission failed. Please try again.");
+      console.log("Email sent successfully:", result.text);
+
+      setTimeout(() => {
+        window.open("/images/documentation/AI ML poster content.pdf", "_blank");
+        setShowModal(false);
         setFormSubmitted(false);
-      }
+        setFormData({ name: "", email: "", phone: "", qualification: "" });
+      }, 1000);
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Something went wrong.");
+      console.error("Email sending failed:", error);
+      alert("Failed to send email. Please try again.");
       setFormSubmitted(false);
     }
   };

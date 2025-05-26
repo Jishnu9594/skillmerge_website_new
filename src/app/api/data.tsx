@@ -12,65 +12,57 @@ export const TrustedCompanies: { imgSrc: string }[] = [
 export const courseData: {
   heading: string;
   imgSrc: string;
-  name: string;
+  description: string;
   students: number;
   classes: number;
-  price: number;
-  rating: number;
 }[] = [
   {
-    heading: "Full stack modern javascript",
-    name: "Colt stelle",
+    heading: "CCSA - Certified Cyber Security Associate",
     imgSrc: "/images/courses/courseone.png",
+    description:
+      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     students: 150,
     classes: 12,
-    price: 20,
-    rating: 4.4,
   },
   {
-    heading: "Design system with React programme",
-    name: "Colt stelle",
+    heading: "CCSA+ Internship",
     imgSrc: "/images/courses/coursetwo.png",
+    description:
+      "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
     students: 130,
     classes: 12,
-    price: 20,
-    rating: 4.5,
   },
   {
-    heading: "Design banner with Figma",
-    name: "Colt stelle",
+    heading: "Certified Cyber Security Specialist (CCSS)",
     imgSrc: "/images/courses/coursethree.png",
+    description:
+      "Cybersecurity Specialist is a fully practical program covering both offensive and defensive security. Learn to hack like an attacker and defend like a pro through real-world, hands-on training designed to build complete cybersecurity expertise.",
     students: 120,
     classes: 12,
-    price: 20,
-    rating: 5,
   },
   {
-    heading: "We Launch Delia Webflow this Week!",
-    name: "Colt stelle",
+    heading: "Advanced Diploma in Purple Teaming (ADPT)",
     imgSrc: "/images/courses/courseone.png",
+    description:
+      "Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
     students: 150,
     classes: 12,
-    price: 20,
-    rating: 5,
   },
   {
-    heading: "We Launch Delia Webflow this Week!",
-    name: "Colt stelle",
+    heading: "Certified Ethical Hacker (CEH) – 1 Month Training",
     imgSrc: "/images/courses/coursetwo.png",
+    description:
+      "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
     students: 150,
     classes: 12,
-    price: 20,
-    rating: 5,
   },
   {
     heading: "We Launch Delia Webflow this Week!",
-    name: "Colt stelle",
     imgSrc: "/images/courses/coursethree.png",
+    description:
+      "A quick course on launching a secure, high-performance website using Webflow.",
     students: 150,
     classes: 12,
-    price: 20,
-    rating: 4.2,
   },
 ];
 
@@ -167,41 +159,84 @@ export const TestimonialData: {
     rating: 5,
   },
 ];
+// app/api/data.tsx
+
 export const courses = [
   {
-    slug: "cybersecurity-fundamentals",
-    title: "Cybersecurity Fundamentals",
-    hours: "120+ hours",
+    slug: "ccsa-certified-cyber-security-associate",
+    title: "CCSA - Certified Cyber Security Associate",
+    hours: "2 months",
     lessons: "20 lessons",
     image: "/images/courses/cyber.jpg",
     details:
-      "This course introduces core cybersecurity concepts, including network security, threat analysis, and cyber hygiene best practices.",
+      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     whatYouLearn: [
-      "Basics of cybersecurity principles",
-      "Network security fundamentals",
-      "Threat analysis and risk management",
-      "Cyber hygiene and best practices",
+      "Information Security Introduction",
+      "Linux Fundamentals",
+      "Networking",
+      "Vulnerability assessment",
+      "Using Metasploitframework",
+      "Attacking common services",
+      "Web application Hacking",
     ],
     modules: [
-      "Introduction to Cybersecurity",
-      "Network Security Basics",
-      "Threats and Vulnerabilities",
-      "Cyber Hygiene",
-      "Practical Labs",
+      "CIA/AAA",
+      "Hacker’s and its type",
+      "Types of Testing",
+      "Ethical Hacking",
+      "Shell",
+      "Basic navigation commands",
+      "Permission management",
+      "User management",
+      "Packet management",
+      "Services and Process management",
+      "Networking standard",
+      "IP address",
+      "Subnetting",
+      "Network address translation and PAT",
+      "Common protocols and port numbers",
+      "CISCO packet tracer",
+      "Vulnerability Research and Analysis",
+      "CVE and CVSS",
+      "Nessus scanning and output",
+      "OpenVAS",
+      "Modules",
+      "Sessions and Jobs",
+      "Meterpreter",
+      "The concept of Attack",
+      "Service Misconfigurations",
+      "Finding sensitive information",
+      "Attacking FTP",
+      "Attacking SMB",
+      "Attacking HTTP",
+      "Web application structure and web Requests",
+      "Using Web proxies (burp, zap, Caido)",
+      "Cross-site scripting",
+      "SQL Injection",
+      "Command Injection",
+      "File Upload",
+      "SSRF",
+      "Login Brute Forcing",
+      "Broken Authentication",
+      "Session Security",
+      "File Inclusion Vulnerability",
+      "Web Attacks",
+      "Documentation and Reporting",
+      "Bug Bounty hunting process",
     ],
     careerOpportunities:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum(The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "Entry-level roles in cybersecurity support, SOC teams, and junior analyst positions.",
     certificate:
       "Certificate of Completion recognized by industry professionals in cybersecurity.",
   },
   {
-    slug: "ethical-hacking-penetration-testing",
-    title: "Ethical Hacking and Penetration Testing",
-    hours: "90+ hours",
+    slug: "ccsa-plus-internship",
+    title: "CCSA+ Internship",
+    hours: " 2+3 months",
     lessons: "18 lessons",
     image: "/images/courses/ethical-hacking.jpg",
     details:
-      "Dive into ethical hacking, penetration testing, vulnerability scanning, and hands-on tools like Kali Linux and Metasploit.",
+      "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
     whatYouLearn: [
       "Ethical hacking fundamentals",
       "Penetration testing techniques",
@@ -221,13 +256,13 @@ export const courses = [
       "Industry-recognized Certificate in Ethical Hacking and Penetration Testing.",
   },
   {
-    slug: "network-security-basics",
-    title: "Network Security Basics",
-    hours: "80+ hours",
+    slug: "certified-cyber-security-specialist-ccss",
+    title: "Certified Cyber Security Specialist (CCSS)",
+    hours: "4 months",
     lessons: "15 lessons",
     image: "/images/courses/network-security.jpg",
     details:
-      "Learn the fundamentals of securing computer networks, firewall configurations, VPNs, and monitoring network traffic.",
+      "Cybersecurity Specialist is a fully practical program covering both offensive and defensive security. Learn to hack like an attacker and defend like a pro through real-world, hands-on training designed to build complete cybersecurity expertise.",
     whatYouLearn: [
       "Network security principles",
       "Firewall configuration",
@@ -241,17 +276,17 @@ export const courses = [
       "Network Monitoring and Analysis",
     ],
     careerOpportunities:
-      "Network Administrator, Security Operations Center (SOC) Analyst, IT Support Engineer.",
+      "Network Administrator, SOC Analyst, IT Support Engineer.",
     certificate: "Certificate of Completion in Network Security Fundamentals.",
   },
   {
-    slug: "incident-response-and-forensics",
-    title: "Incident Response and Forensics",
-    hours: "70+ hours",
+    slug: "advanced-diploma-in-purple-teaming-adpt",
+    title: "Advanced Diploma in purple teaming (ADPT)",
+    hours: " 4+6 months",
     lessons: "12 lessons",
     image: "/images/courses/incident-response.jpg",
     details:
-      "Understand how to detect, respond, and analyze cybersecurity incidents using digital forensic techniques.",
+      " Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
     whatYouLearn: [
       "Incident detection and response",
       "Digital forensics fundamentals",
@@ -269,13 +304,13 @@ export const courses = [
     certificate: "Professional Certificate in Incident Response and Forensics.",
   },
   {
-    slug: "cloud-security-fundamentals",
-    title: "Cloud Security Fundamentals",
-    hours: "60+ hours",
+    slug: "certified-ethical-hacker-ceh-1-month-training",
+    title: "Certified Ethical Hacker (CEH) – 1 Month Training",
+    hours: "1 Month Training",
     lessons: "14 lessons",
     image: "/images/courses/cloud-security.jpg",
     details:
-      "Explore security principles specific to cloud environments including AWS, Azure, and Google Cloud Platform.",
+      "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
     whatYouLearn: [
       "Cloud computing basics",
       "Cloud security challenges",
