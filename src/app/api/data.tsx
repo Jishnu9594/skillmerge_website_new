@@ -17,7 +17,7 @@ export const courseData: {
 }[] = [
   {
     heading: "CCSA - Certified Cyber Security Associate",
-    imgSrc: "/images/courses/courseone.png",
+    imgSrc: "/images/companies/jbc.png",
     description:
       "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     students: 150,
@@ -25,7 +25,7 @@ export const courseData: {
   },
   {
     heading: "CCSA+ Internship",
-    imgSrc: "/images/courses/coursetwo.png",
+    imgSrc: "/images/companies/jbc.png",
     description:
       "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
     students: 130,
@@ -33,7 +33,7 @@ export const courseData: {
   },
   {
     heading: "Certified Cyber Security Specialist (CCSS)",
-    imgSrc: "/images/courses/coursethree.png",
+    imgSrc: "/images/companies/jbc.png",
     description:
       "Cybersecurity Specialist is a fully practical program covering both offensive and defensive security. Learn to hack like an attacker and defend like a pro through real-world, hands-on training designed to build complete cybersecurity expertise.",
     students: 120,
@@ -41,7 +41,7 @@ export const courseData: {
   },
   {
     heading: "Advanced Diploma in Purple Teaming (ADPT)",
-    imgSrc: "/images/courses/courseone.png",
+    imgSrc: "/images/companies/jbc.png",
     description:
       "Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
     students: 150,
@@ -49,7 +49,7 @@ export const courseData: {
   },
   {
     heading: "Certified Ethical Hacker (CEH) – 1 Month Training",
-    imgSrc: "/images/courses/coursetwo.png",
+    imgSrc: "/images/companies/jbc.png",
     description:
       "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
     students: 150,
@@ -57,7 +57,7 @@ export const courseData: {
   },
   {
     heading: "We Launch Delia Webflow this Week!",
-    imgSrc: "/images/courses/coursethree.png",
+    imgSrc: "/images/companies/jbc.png",
     description:
       "A quick course on launching a secure, high-performance website using Webflow.",
     students: 150,

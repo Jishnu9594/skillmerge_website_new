@@ -8,7 +8,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { courseData } from "@/app/api/data";
-import { getImagePrefix } from "@/utils/util";
 
 const Courses = () => {
   const settings = {
@@ -89,7 +88,7 @@ const Courses = () => {
                 <div>
                   <div className="relative rounded-3xl overflow-hidden mb-6">
                     <Image
-                      src={`${getImagePrefix()}${items.imgSrc}`}
+                      src={items.imgSrc}
                       alt="course-image"
                       width={389}
                       height={262}
