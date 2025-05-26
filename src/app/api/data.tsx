@@ -1,12 +1,11 @@
-export const TrustedCompanies: { imgSrc: string }[] = [
-  { imgSrc: "/images/companies/airbnb.svg" },
-  { imgSrc: "/images/companies/fedex.svg" },
-  { imgSrc: "/images/companies/google.svg" },
-  { imgSrc: "/images/companies/hubspot.svg" },
-  { imgSrc: "/images/companies/microsoft.svg" },
-  { imgSrc: "/images/companies/walmart.svg" },
-  { imgSrc: "/images/companies/airbnb.svg" },
-  { imgSrc: "/images/companies/fedex.svg" },
+export const TrustedCompanies = [
+  { imgSrc: "/images/companies/jbc.png", name: "JBC" },
+  { imgSrc: "/images/companies/fedex.svg", name: "FedEx" },
+  { imgSrc: "/images/companies/google.svg", name: "Google" },
+  { imgSrc: "/images/companies/hubspot.svg", name: "HubSpot" },
+  { imgSrc: "/images/companies/microsoft.svg", name: "Microsoft" },
+  { imgSrc: "/images/companies/walmart.svg", name: "Walmart" },
+  { imgSrc: "/images/companies/airbnb.svg", name: "Airbnb" },
 ];
 
 export const courseData: {

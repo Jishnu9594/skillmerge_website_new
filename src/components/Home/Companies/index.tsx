@@ -4,8 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { TrustedCompanies } from "@/app/api/data"; // fixed typo here
-import { getImagePrefix } from "@/utils/util";
+import { TrustedCompanies } from "@/app/api/data"; // Your updated data
 
 const AnimatedBackground = () => (
   <div className="absolute inset-0 z-0 overflow-hidden">
@@ -42,16 +41,26 @@ const Companies = () => {
         <div className="py-14 border-b border-gray-700">
           <Slider {...settings}>
             {TrustedCompanies.map((item, i) => (
-              <div key={i} className="flex justify-center items-center">
+              <div
+                key={i}
+                className="flex flex-col justify-center items-center group transition duration-300"
+              >
                 <img
-                  src={`${getImagePrefix()}${item.imgSrc}`}
+                  src={item.imgSrc}
                   alt={`Trusted company logo ${i + 1}`}
                   width={116}
                   height={36}
                   loading="lazy"
                   draggable={false}
-                  className="object-contain"
+                  className="object-contain hover:scale-105 transition-transform duration-300"
                 />
+                <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition duration-300">
+                  {item.imgSrc
+                    .split("/")
+                    .pop()
+                    ?.replace(/\.[^/.]+$/, "")
+                    .toUpperCase()}
+                </span>
               </div>
             ))}
           </Slider>
