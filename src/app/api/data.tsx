@@ -74,32 +74,32 @@ export const MentorData: {
   {
     profession: "Senior UX Designer",
     name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user3.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
   },
   {
     profession: "Senior UX Designer",
     name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user2.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
   },
   {
     profession: "Senior UX Designer",
     name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user1.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
   },
   {
     profession: "Senior UX Designer",
     name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user3.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
   },
   {
     profession: "Senior UX Designer",
     name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user2.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
   },
   {
     profession: "Senior UX Designer",
     name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user1.png",
+    imgSrc: "/images/mentor/ashi-removebg-preview (1).png",
   },
 ];
 
