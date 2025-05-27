@@ -79,7 +79,8 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
         <p className="text-gray-300 mb-6">{course.certificate}</p>
 
         <div className="mt-8">
-          <LeadFormModal />
+          {/* Pass brochureUrl from course */}
+          <LeadFormModal brochureUrl={course.brochure} />
         </div>
       </div>
     </section>

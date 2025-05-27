@@ -172,12 +172,13 @@ export const TestimonialData: {
 export const courses = [
   {
     slug: "advanced-diploma-in-purple-teaming-adpt",
-    title: "Advanced Diploma in purple teaming (ADPT)",
-    hours: " 10 months",
+    title: "Advanced Diploma in Purple Teaming (ADPT)",
+    hours: "10 months",
     lessons: "12 lessons",
     image: "/images/courses/incident-response.jpg",
+    brochure: "/brochures/adpt.pdf",
     details:
-      " Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
+      "Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
     whatYouLearn: [
       "Incident detection and response",
       "Digital forensics fundamentals",
@@ -200,6 +201,7 @@ export const courses = [
     hours: "5 months",
     lessons: "18 lessons",
     image: "/images/courses/ethical-hacking.jpg",
+    brochure: "/brochures/cca-plus.pdf",
     details:
       "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
     whatYouLearn: [
@@ -226,6 +228,7 @@ export const courses = [
     hours: "2 months",
     lessons: "20 lessons",
     image: "/images/courses/cyber.jpg",
+    brochure: "/brochures/cca.pdf",
     details:
       "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     whatYouLearn: [
@@ -287,13 +290,13 @@ export const courses = [
     certificate:
       "Certificate of Completion recognized by industry professionals in cybersecurity.",
   },
-
   {
     slug: "certified-cyber-security-specialist-ccs",
     title: "Certified Cyber Security Specialist (CCS)",
     hours: "4 months",
     lessons: "15 lessons",
     image: "/images/courses/network-security.jpg",
+    brochure: "/brochures/ccs.pdf",
     details:
       "Cybersecurity Specialist is a fully practical program covering both offensive and defensive security. Learn to hack like an attacker and defend like a pro through real-world, hands-on training designed to build complete cybersecurity expertise.",
     whatYouLearn: [
@@ -312,13 +315,13 @@ export const courses = [
       "Network Administrator, SOC Analyst, IT Support Engineer.",
     certificate: "Certificate of Completion in Network Security Fundamentals.",
   },
-
   {
     slug: "certified-ethical-hacker-ceh-1-month-training",
     title: "Certified Ethical Hacker (CEH) – 1 Month Training",
     hours: "1 Month Training",
     lessons: "14 lessons",
     image: "/images/courses/cloud-security.jpg",
+    brochure: "/brochures/ceh.pdf",
     details:
       "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
     whatYouLearn: [
@@ -344,6 +347,7 @@ export const courses = [
     hours: "6 months",
     lessons: "20 lessons",
     image: "/images/courses/certification-prep.jpg",
+    brochure: "/brochures/6-month-internship.pdf",
     details:
       "6-Month Cybersecurity Internship is a fully practical program focused on both offensive and defensive security. Gain real-world experience through hands-on training, live attack and defense scenarios, and work on real projects based on your performance and eligibility—perfect for building strong, job-ready skills in cybersecurity.",
     whatYouLearn: [
@@ -369,8 +373,9 @@ export const courses = [
     hours: "1 months",
     lessons: "20 lessons",
     image: "/images/courses/certification-prep.jpg",
+    brochure: "/brochures/1-month-internship.pdf",
     details:
-      "6-Month Cybersecurity Internship is a fully practical program focused on both offensive and defensive security. Gain real-world experience through hands-on training, live attack and defense scenarios, and work on real projects based on your performance and eligibility—perfect for building strong, job-ready skills in cybersecurity.",
+      "1-Month Cybersecurity Internship is a fully practical program focused on both offensive and defensive security. Gain real-world experience through hands-on training, live attack and defense scenarios, and work on real projects based on your performance and eligibility—perfect for building strong, job-ready skills in cybersecurity.",
     whatYouLearn: [
       "Certification exam strategies",
       "CompTIA Security+ core topics",

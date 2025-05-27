@@ -3,9 +3,14 @@
 import { useState, useEffect, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function LeadFormModal() {
+type LeadFormModalProps = {
+  brochureUrl: string;
+};
+
+export default function LeadFormModal({ brochureUrl }: LeadFormModalProps) {
   const [showModal, setShowModal] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,7 +18,6 @@ export default function LeadFormModal() {
     qualification: "",
   });
 
-  // Hardcoded EmailJS config
   const serviceId = "service_j9yjjp5";
   const templateId = "template_5ubkxxo";
   const publicKey = "UKlZisTZGOT0L9ggF";
@@ -25,9 +29,35 @@ export default function LeadFormModal() {
     };
   }, [showModal]);
 
+  const validateEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const validatePhone = (phone: string) =>
+    phone.length >= 7 && /^[0-9+()\-.\s]*$/.test(phone);
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    setErrorMsg(null);
+
+    // Basic validations
+    if (!formData.name.trim()) {
+      setErrorMsg("Please enter your name.");
+      return;
+    }
+    if (!validateEmail(formData.email)) {
+      setErrorMsg("Please enter a valid email address.");
+      return;
+    }
+    if (!validatePhone(formData.phone)) {
+      setErrorMsg("Please enter a valid phone number.");
+      return;
+    }
+    if (!formData.qualification.trim()) {
+      setErrorMsg("Please enter your qualification.");
+      return;
+    }
+
+    setIsSubmitting(true);
 
     try {
       const result = await emailjs.send(
@@ -44,16 +74,17 @@ export default function LeadFormModal() {
 
       console.log("Email sent successfully:", result.text);
 
+      // Open brochure after a short delay
       setTimeout(() => {
-        window.open("/images/documentation/AI ML poster content.pdf", "_blank");
+        window.open(brochureUrl, "_blank");
         setShowModal(false);
-        setFormSubmitted(false);
         setFormData({ name: "", email: "", phone: "", qualification: "" });
+        setIsSubmitting(false);
       }, 1000);
     } catch (error) {
       console.error("Email sending failed:", error);
-      alert("Failed to send email. Please try again.");
-      setFormSubmitted(false);
+      setErrorMsg("Failed to send email. Please try again.");
+      setIsSubmitting(false);
     }
   };
 
@@ -72,6 +103,7 @@ export default function LeadFormModal() {
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 text-2xl font-bold text-gray-700 hover:text-red-500"
+              aria-label="Close modal"
             >
               &times;
             </button>
@@ -80,7 +112,7 @@ export default function LeadFormModal() {
               Download Course Brochure
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               <Input
                 label="Name"
                 value={formData.name}
@@ -106,11 +138,18 @@ export default function LeadFormModal() {
                 }
               />
 
+              {errorMsg && (
+                <p className="text-red-600 text-sm font-medium">{errorMsg}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-[#1BD46C] text-black py-3 rounded font-semibold hover:bg-opacity-90 transition"
+                className={`w-full bg-[#1BD46C] text-black py-3 rounded font-semibold hover:bg-opacity-90 transition ${
+                  isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                }`}
+                disabled={isSubmitting}
               >
-                {formSubmitted ? "Submitting..." : "Submit & Download"}
+                {isSubmitting ? "Submitting..." : "Submit & Download"}
               </button>
             </form>
           </div>
