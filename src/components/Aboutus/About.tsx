@@ -3,10 +3,10 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const teamMembers = [
   {
-    src: "/images/mentor/nishi-removebg-preview (1).png",
-    name: "Nishal – CEO",
-    linkedin: "https://www.linkedin.com/in/nishalll/",
-    instagram: "https://www.instagram.com/nishhaaallll",
+    src: "/images/mentor/sha-removebg-preview (1).png",
+    name: "Shammas – CFO",
+    linkedin: "https://www.linkedin.com/in/muhammedshammasmc/",
+    instagram: "https://www.instagram.com/shammmaaaas._",
   },
   {
     src: "/images/mentor/ashi-removebg-preview (1).png",
@@ -15,10 +15,10 @@ const teamMembers = [
     instagram: "https://www.instagram.com/ashique.exe",
   },
   {
-    src: "/images/mentor/sha-removebg-preview (1).png",
-    name: "Shammas – CFO",
-    linkedin: "https://www.linkedin.com/in/muhammedshammasmc/",
-    instagram: "https://www.instagram.com/shammmaaaas._",
+    src: "/images/mentor/nishi-removebg-preview (1).png",
+    name: "Nishal – CEO",
+    linkedin: "https://www.linkedin.com/in/nishalll/",
+    instagram: "https://www.instagram.com/nishhaaallll",
   },
 ];
 

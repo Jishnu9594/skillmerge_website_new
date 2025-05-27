@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             </Link>
           ))}
           <a
-            href="tel:+919876543210"
+            href="tel:+91 90379 37434"
             className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition"
           >
             Contact Us
@@ -109,13 +109,12 @@ const Header: React.FC = () => {
               {item.name}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-center"
-            onClick={() => setNavbarOpen(false)}
+          <a
+            href="tel:+91 90379 37434"
+            className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition"
           >
             Contact Us
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

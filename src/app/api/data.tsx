@@ -13,7 +13,7 @@ export const TrustedCompanies = [
     name: "purplenexus",
   },
   { imgSrc: "/images/companies/wh_lg-1024x651.png", name: "neogenmedia" },
-  { imgSrc: "/images/companies/ishakan.png", name: "ishakan" },
+  { imgSrc: "/images/companies/ishkanlogo.png", name: "ishakan" },
   { imgSrc: "/images/companies/innovatexlogo.png", name: "innovatexlabs" },
 ];
 

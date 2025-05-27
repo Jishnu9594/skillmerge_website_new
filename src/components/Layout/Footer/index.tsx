@@ -102,7 +102,7 @@ const Footer = () => {
         {/* Footer bottom */}
         <div className="mt-10 lg:flex items-center justify-between text-gray-500 text-sm">
           <h4 className="text-center lg:text-left font-normal">
-            &copy; 2025 Agency. All Rights Reserved by{" "}
+            &copy; 2025 INNOVATE_XLAB. All Rights Reserved by{" "}
             <Link
               href="#"
               target="_blank"

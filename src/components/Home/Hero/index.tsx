@@ -52,7 +52,7 @@ const Hero = () => {
         "UKlZisTZGOT0L9ggF" // Replace with your EmailJS public key
       )
       .then(
-        (result) => {
+        () => {
           alert("Inquiry sent successfully!");
           e.currentTarget.reset();
         },
@@ -61,6 +61,12 @@ const Hero = () => {
           alert("Failed to send inquiry.");
         }
       );
+  };
+
+  const openWhatsApp = (message: string) => {
+    const phoneNumber = "+919037937434"; // Updated number
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -98,10 +104,20 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-[#1BD46C] hover:bg-[#16b55b] text-black font-semibold py-3 px-6 rounded-md">
+              <button
+                onClick={() =>
+                  openWhatsApp("Hi, I’m interested in a free demo session.")
+                }
+                className="bg-[#1BD46C] hover:bg-[#16b55b] text-black font-semibold py-3 px-6 rounded-md"
+              >
                 Book a Free Demo Session
               </button>
-              <button className="bg-transparent border border-white hover:border-[#1BD46C] text-white font-semibold py-3 px-6 rounded-md">
+              <button
+                onClick={() =>
+                  openWhatsApp("Hi, I’m interested in applying for the course.")
+                }
+                className="bg-transparent border border-white hover:border-[#1BD46C] text-white font-semibold py-3 px-6 rounded-md"
+              >
                 Apply Now
               </button>
             </div>
