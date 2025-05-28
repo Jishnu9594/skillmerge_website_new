@@ -65,19 +65,19 @@ const FoundersNote = () => {
             </p>
           </div>
 
-          {/* Right: Square image with geometric background */}
+          {/* Right: Image with Decorative Background */}
           <div className="relative w-full flex justify-center items-center">
             {/* Decorative rotated square behind the image */}
             <div className="absolute w-72 h-72 decorative-shape rounded-2xl opacity-20 blur-[2px]"></div>
 
-            {/* Founder Image */}
+            {/* Founder Image (no border or shadow) */}
             <div className="relative z-10">
               <Image
                 src={founder.imgSrc}
                 alt="founder"
                 width={280}
                 height={280}
-                className="rounded-2xl object-cover border-4 border-cyber-green shadow-xl"
+                className="rounded-2xl object-cover"
               />
               {/* LinkedIn Icon */}
               <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-md">
