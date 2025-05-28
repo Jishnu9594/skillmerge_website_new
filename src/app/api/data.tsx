@@ -228,7 +228,7 @@ export const courses = [
     hours: "2 months",
     lessons: "20 lessons",
     image: "/images/courses/cyber.jpg",
-    brochure: "/brochures/cca.pdf",
+    brochure: "/images/resources/download.pdf",
     details:
       "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     whatYouLearn: [

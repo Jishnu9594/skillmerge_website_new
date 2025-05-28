@@ -25,19 +25,20 @@ export async function generateMetadata({
 }
 
 export default function CourseDetail({ params }: { params: { slug: string } }) {
+  // Find the course data by slug
   const course = courses.find((c) => c.slug === params.slug);
 
+  // If course not found, return 404
   if (!course) return notFound();
 
   return (
     <section className="min-h-screen pt-28 px-4 bg-black text-white relative z-10">
-      {/* Background */}
+      {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[150%] h-[150%] bg-gradient-to-tr from-[#011A10] via-[#010D07] to-[#011A10] animate-pulse-slow opacity-20 rotate-12" />
         <div className="absolute w-[120%] h-[120%] bg-[radial-gradient(circle,#1BD46C_1px,transparent_1px)] bg-[length:20px_20px] opacity-10 animate-movePattern" />
       </div>
 
-      {/* Course Details */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">{course.title}</h1>
 
@@ -78,8 +79,8 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
         </h2>
         <p className="text-gray-300 mb-6">{course.certificate}</p>
 
+        {/* Pass the brochure URL dynamically */}
         <div className="mt-8">
-          {/* Pass brochureUrl from course */}
           <LeadFormModal brochureUrl={course.brochure} />
         </div>
       </div>
