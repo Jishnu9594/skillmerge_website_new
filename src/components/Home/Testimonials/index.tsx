@@ -4,9 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Image from "next/image";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon } from "@iconify/react";
 import { TestimonialData } from "@/app/api/data";
-import { getImagePrefix } from "@/utils/util";
 
 const Testimonial = () => {
   const settings = {
@@ -86,7 +85,7 @@ const Testimonial = () => {
                 {/* Top: Image */}
                 <div className="flex items-center mb-4">
                   <Image
-                    src={`${getImagePrefix()}${items.imgSrc}`}
+                    src={items.imgSrc}
                     alt={items.name}
                     width={64}
                     height={64}
