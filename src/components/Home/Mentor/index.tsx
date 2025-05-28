@@ -7,9 +7,9 @@ const FoundersNote = () => {
   const founder = {
     name: "MUHAMMAD ASHIQUE",
     profession: "Founder & CTO, Skillmerge",
-    imgSrc: "/images/mentor/ashi-removebg-preview (1).png", // Make sure this is in /public/images/mentor/
-    note: "At our core, we believe cybersecurity is a path to empowerment—not just protection. Our mission is to inspire, educate, and equip tomorrow’s cyber defenders through hands-on learning and real-world experience.",
-    linkedin: "/images/mentor/linkedin.svg", // Also must be inside /public/images/mentor/
+    imgSrc: "/images/mentor/founder.png",
+    note: "I started SkillMerge because I truly believe anyone can build a career in cybersecurity with the right support and hands-on training. We don’t just teach theory—we help you practice real skills that you’ll actually use in the field. Our Aim is simple: to guide and support you in becoming a confident and skilled cybersecurity professional.",
+    linkedin: "/images/mentor/linkedin.svg",
   };
 
   return (
@@ -33,6 +33,12 @@ const FoundersNote = () => {
           filter: blur(200px);
           opacity: 0.15;
         }
+
+        .decorative-shape {
+          background: linear-gradient(135deg, #00ff99, #003300);
+          transform: rotate(45deg);
+          z-index: 0;
+        }
       `}</style>
 
       {/* Glowing background blob */}
@@ -42,7 +48,7 @@ const FoundersNote = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-white text-4xl lg:text-5xl font-bold text-center mb-20">
-          Founder Note
+          Hear from our Founder
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -59,15 +65,19 @@ const FoundersNote = () => {
             </p>
           </div>
 
-          {/* Right: Image with glow underlay */}
-          <div className="relative w-full flex justify-center">
+          {/* Right: Square image with geometric background */}
+          <div className="relative w-full flex justify-center items-center">
+            {/* Decorative rotated square behind the image */}
+            <div className="absolute w-72 h-72 decorative-shape rounded-2xl opacity-20 blur-[2px]"></div>
+
+            {/* Founder Image */}
             <div className="relative z-10">
               <Image
                 src={founder.imgSrc}
                 alt="founder"
                 width={280}
                 height={280}
-                className="rounded-full object-cover border-4 border-cyber-green shadow-xl"
+                className="rounded-2xl object-cover border-4 border-cyber-green shadow-xl"
               />
               {/* LinkedIn Icon */}
               <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-md">
@@ -79,9 +89,6 @@ const FoundersNote = () => {
                 />
               </div>
             </div>
-
-            {/* Background glow below image */}
-            <div className="absolute top-28 w-72 h-72 bg-cyber-green opacity-20 blur-3xl rounded-full z-0"></div>
           </div>
         </div>
       </div>

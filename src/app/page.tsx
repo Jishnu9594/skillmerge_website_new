@@ -31,10 +31,10 @@ export default function Home() {
       <Courses />
       <Mentor />
       <ScrollingBanner />
-      <FaqContactSection />
       <Testimonial />
       <GalleryCarousel />
       <ScrollingBanner />
+      <FaqContactSection />
     </main>
   );
 }

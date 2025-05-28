@@ -11,10 +11,12 @@ const WhatIsHackingSection = () => {
 
         {/* Description */}
         <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-          Hacking refers to activities that seek to compromise digital devices,
-          such as computers, smartphones, tablets, and even entire networks.
-          Ethical hacking is used to improve system security, while malicious
-          hacking can lead to data breaches and cybersecurity threats.
+          Hacking means getting into computers, phones, or networks — sometimes
+          in a good way, and sometimes in a bad way. Bad hackers try to steal
+          information or break things. But ethical hackers use their skills to
+          find and fix problems before bad hackers can attack. At SkillMerge, we
+          teach ethical hacking to help protect people and companies from cyber
+          threats.
         </p>
 
         {/* Video Container */}

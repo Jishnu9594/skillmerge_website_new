@@ -93,14 +93,14 @@ const Hero = () => {
                 {displayedText}
                 <span className="blinking-cursor">|</span>
               </span>{" "}
-              Kerala’s 1st Fully Practical Oriented Cybersecurity Training
+              Kerala’s First Fully Practical Oriented Cybersecurity Training
               Institute
             </h1>
 
             <p className="text-gray-400 text-lg max-w-xl">
-              Join Kerala’s 1st Hands-On Cybersecurity Training Institute and
-              gain real-world skills to kickstart your career in ethical hacking
-              and cybersecurity.
+              Join Kerala’s 1st Hands On Cybersecurity Training Institute and
+              gain real world skills to kickstart your career in Ethical Hacking
+              and Cybersecurity.
             </p>
 
             <div className="flex flex-wrap gap-4">

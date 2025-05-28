@@ -1,42 +1,12 @@
 "use client";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon } from "@iconify/react";
 import { courseData } from "@/app/api/data";
 
 const Courses = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    arrows: false,
-    autoplay: true,
-    speed: 500,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section
       id="courses"
@@ -81,62 +51,57 @@ const Courses = () => {
           </Link>
         </div>
 
-        <Slider {...settings}>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {courseData.map((items, i) => (
-            <div key={i} className="px-2">
-              <div className="bg-black border-cyber-green rounded-2xl shadow-cyber-green p-5 h-[530px] flex flex-col justify-between card-hover">
-                <div>
-                  <div className="relative rounded-3xl overflow-hidden mb-6">
-                    <Image
-                      src={items.imgSrc}
-                      alt="course-image"
-                      width={389}
-                      height={262}
-                      className="rounded-xl mx-auto"
-                    />
-                    <div className="absolute right-5 -bottom-2 bg-[#008755] rounded-full p-6">
-                      <h3 className="text-white uppercase text-center text-sm font-medium">
-                        best <br />
-                        seller
-                      </h3>
-                    </div>
-                  </div>
-
-                  <Link
-                    href="#"
-                    className="text-white text-2xl font-bold block mb-3"
-                  >
-                    {items.heading}
-                  </Link>
-                  <p className="text-white text-base opacity-80 mb-6 line-clamp-3">
-                    {items.description}
-                  </p>
+            <div
+              key={i}
+              className="bg-black border-cyber-green rounded-2xl shadow-cyber-green p-6 min-h-[550px] flex flex-col justify-between card-hover"
+            >
+              <div>
+                <div className="relative rounded-3xl overflow-hidden mb-6">
+                  <Image
+                    src={items.imgSrc}
+                    alt="course-image"
+                    width={400}
+                    height={260}
+                    className="rounded-xl mx-auto"
+                  />
                 </div>
 
-                <div className="flex justify-between items-center mt-auto pt-6 border-t border-cyber-green">
-                  <div className="flex items-center gap-2">
-                    <Icon
-                      icon="solar:notebook-minimalistic-outline"
-                      className="text-cyber-green text-xl"
-                    />
-                    <span className="text-white text-base opacity-90">
-                      {items.classes} classes
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon
-                      icon="solar:users-group-rounded-linear"
-                      className="text-cyber-green text-xl"
-                    />
-                    <span className="text-white text-base opacity-90">
-                      {items.students} students
-                    </span>
-                  </div>
+                <Link
+                  href="#"
+                  className="text-white text-2xl font-bold block mb-4"
+                >
+                  {items.heading}
+                </Link>
+                <p className="text-white text-base opacity-80 mb-4 line-clamp-3">
+                  {items.description}
+                </p>
+              </div>
+
+              <div className="flex justify-between items-center mt-4">
+                <div className="flex items-center gap-2">
+                  <Icon
+                    icon="solar:notebook-minimalistic-outline"
+                    className="text-cyber-green text-xl"
+                  />
+                  <span className="text-white text-base opacity-90">
+                    {items.classes} classes
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon
+                    icon="solar:users-group-rounded-linear"
+                    className="text-cyber-green text-xl"
+                  />
+                  <span className="text-white text-base opacity-90">
+                    {items.students} students
+                  </span>
                 </div>
               </div>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
     </section>
   );

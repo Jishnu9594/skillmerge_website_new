@@ -10,37 +10,35 @@ const highlights = [
     icon: "mdi:lock",
     title: "Penetration Testing",
     description:
-      "Learn to identify and exploit vulnerabilities in systems, networks, and applications.",
+      "Find weak spots in computers, networks, and apps before bad hackers do.",
   },
   {
     icon: "mdi:code-tags",
     title: "Secure Coding",
     description:
-      "Develop applications with security in mind and identify vulnerabilities in existing code.",
+      "Write software the safe way and spot risky code in old programs.",
   },
   {
     icon: "mdi:database-lock",
     title: "Digital Forensics",
     description:
-      "Investigate security incidents and recover digital evidence using industry-standard tools.",
+      "Look into cyber attacks and pull out digital clues with professional tools.",
   },
   {
     icon: "mdi:server-security",
     title: "Network Security",
     description:
-      "Configure and maintain secure networks, firewalls, and intrusion detection systems.",
+      "Set up and protect networks, firewalls, and intrusion-detection systems.",
   },
   {
     icon: "mdi:web",
     title: "Web App Security",
-    description:
-      "Identify and mitigate common web vulnerabilities like XSS, CSRF, and SQL injection.",
+    description: "Fix common website holes like XSS, CSRF, and SQL injection.",
   },
   {
     icon: "mdi:shield-account",
     title: "Security Operations",
-    description:
-      "Monitor, detect, and respond to security incidents in real-time environments.",
+    description: "Watch, detect, and react to cyber threats as they happen.",
   },
 ];
 
@@ -116,8 +114,7 @@ export default function ProgramHighlights() {
           Program Highlights
         </h2>
         <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
-          Our comprehensive program is designed to transform beginners into
-          industry-ready cybersecurity professionals.
+          Our training turns beginners into job-ready cybersecurity pros.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">

@@ -57,14 +57,14 @@ export const courseData: {
     classes: 12,
   },
 
-  // {
-  //   heading: "Certified Ethical Hacker (CEH) – 1 Month Training",
-  //   imgSrc: "/images/companies/jbc.png",
-  //   description:
-  //     "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
-  //   students: 150,
-  //   classes: 12,
-  // },
+  {
+    heading: "CCA + INTERNSHIP",
+    imgSrc: "/images/companies/5.png",
+    description:
+      "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
+    students: 150,
+    classes: 12,
+  },
   // {
   //   heading: "We Launch Delia Webflow this Week!",
   //   imgSrc: "/images/companies/jbc.png",
@@ -120,53 +120,53 @@ export const TestimonialData: {
   rating: number;
 }[] = [
   {
-    name: "Robert Fox",
-    profession: "CEO, Parkview Int.Ltd",
+    name: " Hiba",
+    profession: "",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user.svg",
+      "I always had an interest in cybersecurity but didn’t know where to begin. When I joined SkillMerge, I expected basic training, but I got so much more. The classes were super interactive, and we worked on real challenges instead of just reading slides. I also loved how the instructors shared their own real-world experience, which helped me understand what it’s like to work in the industry. By the end of the course, I not only gained skills but also a lot of confidence",
+    imgSrc: "/images/companies/hiba.jpg",
     rating: 5,
   },
   {
-    name: "Leslie Alexander",
-    profession: "CEO, Parkview Int.Ltd",
+    name: " Zaina Ameer",
+    profession: "",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/mentor/user2.png",
+      "Other places only teach theory, but here we actually do everything hands-on. The trainers were friendly and always helped when I had doubts. It was a great experience.",
+    imgSrc: "/images/companies/zaina.jpeg",
     rating: 5,
   },
   {
-    name: "Cody Fisher",
-    profession: "CEO, Parkview Int.Ltd",
+    name: "Telbin",
+    profession: "",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/mentor/user3.png",
+      "Joining SkillMerge was the best decision I made during my studies. I had some basic knowledge, but this course gave me real practical skills. We didn’t just sit in a classroom—we actually worked with tools like Burp Suite, Kali Linux, and Wireshark. I also learned how to think like a hacker (ethically, of course), which helped me understand security better. The trainers were friendly and explained things clearly, no matter how many times I asked. Today, I feel ready to apply for cybersecurity jobs, and I even started doing small freelance work thanks to what I learned here.",
+    imgSrc: "/images/companies/telbin.jpg",
     rating: 5,
   },
   {
-    name: "Robert Fox",
-    profession: "CEO, Parkview Int.Ltd",
+    name: "Pooja",
+    profession: "",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/mentor/user1.png",
+      " Most institutes focus only on theory or give you long videos to watch. At SkillMerge, it was completely different. Every session had practical tasks, real tools, and live labs. We worked on actual scenarios like investigating attacks or finding security bugs. The environment was friendly, and I felt motivated throughout the course. The best part is that they don’t just teach — they guide you on how to build a career in cybersecurity. I’ve already started applying for internships and have even cleared a few interviews",
+    imgSrc: "/images/companies/pooja.jpg",
     rating: 5,
   },
   {
-    name: "Leslie Alexander",
-    profession: "CEO, Parkview Int.Ltd",
+    name: "Denita",
+    profession: "",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/mentor/user2.png",
+      "I didn’t know anything about cybersecurity before, but SkillMerge made it really easy to learn. The practical sessions helped me understand everything. Now I feel ready to apply for jobs!",
+    imgSrc: "/images/companies/denita.jpg",
     rating: 5,
   },
-  {
-    name: "Cody Fisher",
-    profession: "CEO, Parkview Int.Ltd",
-    comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/mentor/user3.png",
-    rating: 5,
-  },
+  // {
+  //   name: "Cody Fisher",
+  //   profession: "CEO, Parkview Int.Ltd",
+  //   comment:
+  //     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+  //   imgSrc: "/images/mentor/user3.png",
+  //   rating: 5,
+  // },
 ];
 // app/api/data.tsx
 

@@ -72,19 +72,19 @@ const Testimonial = () => {
   return (
     <section id="testimonial" className="bg-black py-20 relative z-10">
       <div className="container mx-auto px-4">
-        {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-12 tracking-wider">
-          What Our Students Say
+          Real Stories from Our Students
         </h2>
 
         <Slider {...settings}>
           {TestimonialData.map((items, i) => (
             <div key={i}>
               <div
-                className={`bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-green-500/30 rounded-xl m-4 p-6 shadow-lg transition-all duration-300 hover:scale-[1.01]`}
+                className="bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-green-500/30 rounded-xl m-4 p-6 shadow-lg transition-all duration-300 hover:scale-[1.01] 
+                flex flex-col justify-between h-[340px] overflow-hidden"
               >
-                {/* Always visible image */}
-                <div className="flex justify-start items-center mb-4">
+                {/* Top: Image */}
+                <div className="flex items-center mb-4">
                   <Image
                     src={`${getImagePrefix()}${items.imgSrc}`}
                     alt={items.name}
@@ -94,17 +94,20 @@ const Testimonial = () => {
                   />
                 </div>
 
-                <h4 className="text-sm text-gray-300 mb-6 font-light leading-relaxed">
+                {/* Middle: Comment */}
+                <p className="text-sm text-gray-300 mb-4 font-light leading-relaxed line-clamp-4">
                   {items.comment}
-                </h4>
-                <div className="flex justify-between items-center mt-6">
+                </p>
+
+                {/* Bottom: Name, Profession, Rating */}
+                <div className="flex justify-between items-center mt-auto pt-4">
                   <div>
                     <h3 className="text-md font-semibold text-green-400">
                       {items.name}
                     </h3>
-                    <h3 className="text-xs font-light text-gray-500">
+                    <p className="text-xs font-light text-gray-500">
                       {items.profession}
-                    </h3>
+                    </p>
                   </div>
                   <div className="flex">{renderStars(items.rating)}</div>
                 </div>

@@ -5,14 +5,14 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqData = [
   {
-    question: "What are the prerequisites for this program?",
+    question: "What makes SkillMerge different from other institutes?",
     answer:
-      "Basic understanding of computer networks is helpful, but no formal prerequisites are required.",
+      "At SkillMerge, we focus on learning by doing. Instead of just teaching theory, we give you real-world, practical training that prepares you for actual cybersecurity jobs. Our courses are affordable, fully hands-on, and designed by industry experts. Plus, we’re proud to be Kerala’s 1st fully practical-oriented cybersecurity training center.",
   },
   {
-    question: "How long is the program?",
+    question: "Who can join this course?",
     answer:
-      "The program typically runs for 12 weeks with flexible learning options.",
+      "Anyone interested in cybersecurity! No technical background is needed. We start from the basics and guide you step by step.",
   },
   {
     question: "Is the program available online?",
@@ -20,14 +20,29 @@ const faqData = [
       "Yes, this program is available 100% online with live sessions and recorded access.",
   },
   {
-    question: "What certification will I receive?",
+    question: "Do I need to know coding?",
     answer:
-      "Upon completion, you'll receive a Certified Cybersecurity Specialist certificate.",
+      "Not at all. We’ll teach you what you need to know, and most of the tools we use don’t require deep coding skills.",
   },
   {
-    question: "Do you offer job placement assistance?",
+    question: "How long is the course?",
     answer:
-      "Yes, we offer full placement support including resume reviews and interview preparation.",
+      "The course usually takes 3 to 4 months, depending on the pace you choose.",
+  },
+  {
+    question: "Is this course fully practical?",
+    answer:
+      "Yes! Our training is hands-on. You’ll learn by doing, not just by reading or watching.",
+  },
+  {
+    question: "Can this course help me get a job?",
+    answer:
+      "Absolutely. We prepare you with real skills and also offer 100% Placement to help you connect with companies looking for cybersecurity talent.",
+  },
+  {
+    question: "Is it online or offline?",
+    answer:
+      "We offer both online and Offline sessions. You can choose what works best for you.",
   },
 ];
 
