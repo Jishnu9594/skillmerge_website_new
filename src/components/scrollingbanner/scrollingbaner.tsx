@@ -21,9 +21,9 @@ const ScrollingBanner = () => {
       `}</style>
 
       <div className="w-full overflow-hidden">
-        <div className="scrolling-wrapper text-white text-3xl md:text-4xl font-cyber font-bold tracking-wider uppercase whitespace-nowrap">
+        <div className="scrolling-wrapper text-white text-base md:text-2xl lg:text-2xl font-cyber font-bold tracking-wider uppercase whitespace-nowrap">
           {[...Array(10)].map((_, index) => (
-            <span className="mx-8" key={index}>
+            <span className="mx-6 md:mx-8" key={index}>
               {text}
             </span>
           ))}

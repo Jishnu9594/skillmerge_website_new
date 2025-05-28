@@ -81,18 +81,20 @@ const Testimonial = () => {
           {TestimonialData.map((items, i) => (
             <div key={i}>
               <div
-                className={`bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-green-500/30 rounded-xl m-4 p-6 my-20 shadow-lg transition-all duration-300 hover:scale-[1.01]`}
+                className={`bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-green-500/30 rounded-xl m-4 p-6 shadow-lg transition-all duration-300 hover:scale-[1.01]`}
               >
-                <div className="absolute -top-14 left-6">
+                {/* Always visible image */}
+                <div className="flex justify-start items-center mb-4">
                   <Image
                     src={`${getImagePrefix()}${items.imgSrc}`}
                     alt={items.name}
-                    width={80}
-                    height={80}
+                    width={64}
+                    height={64}
                     className="rounded-full border-2 border-green-400"
                   />
                 </div>
-                <h4 className="text-sm text-gray-300 mt-12 mb-6 font-light leading-relaxed">
+
+                <h4 className="text-sm text-gray-300 mb-6 font-light leading-relaxed">
                   {items.comment}
                 </h4>
                 <div className="flex justify-between items-center mt-6">
