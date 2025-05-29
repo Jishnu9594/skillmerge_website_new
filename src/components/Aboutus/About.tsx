@@ -67,10 +67,13 @@ const AboutUsHero = () => {
             Who We Are
           </h2>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-            We are a dynamic cybersecurity team committed to empowering
-            individuals and businesses with top-tier security education,
-            strategies, and solutions. Our passion lies in building a safer
-            digital future.
+            SkillMerge is Kerala’s first hands-on cybersecurity training
+            institute. We are a team of experts and trainers who believe
+            learning should be practical, not just theory. Our courses focus on
+            real experience with live labs and real challenges. Whether you’re a
+            student, fresher, or professional, we help you build the skills
+            needed for a career in cybersecurity. We’re here to support you
+            every step of the way.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
@@ -79,8 +82,9 @@ const AboutUsHero = () => {
                 Our Mission
               </h3>
               <p className="text-gray-400 text-sm sm:text-base">
-                To provide actionable, real-world cybersecurity training and
-                solutions that drive confidence and safety in a connected world.
+                SkillMerge offers practical, affordable cybersecurity training
+                focused on real-world skills for jobs and internships—not just
+                certificates
               </p>
             </div>
             <div className="bg-black border-l-4 border-green-500 p-4 rounded shadow-md">
@@ -88,8 +92,9 @@ const AboutUsHero = () => {
                 Our Vision
               </h3>
               <p className="text-gray-400 text-sm sm:text-base">
-                To become the most trusted source for cybersecurity knowledge,
-                training, and innovation globally.
+                We aim to be India’s most trusted cybersecurity learning
+                platform. With the right support, anyone can start a great
+                career, join top companies, and help build a safer internet
               </p>
             </div>
           </div>

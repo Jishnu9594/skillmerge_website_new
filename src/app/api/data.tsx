@@ -226,7 +226,7 @@ export const courses = [
   {
     slug: "internship",
     title: "INTERNSHIP",
-    hours: "2 months",
+    hours: "6 months",
     lessons: "20 lessons",
     image: "/images/companies/4.png",
     brochure: "/images/resources/download.pdf",
@@ -319,7 +319,7 @@ export const courses = [
   {
     slug: "cca-internship",
     title: "CCA + INTERNSHIP",
-    hours: "1 Month Training",
+    hours: "5 Month Training",
     lessons: "14 lessons",
     image: "/images/companies/5.png",
     brochure: "/brochures/ceh.pdf",
