@@ -1,63 +1,9 @@
 import Image from "next/image";
-import { Linkedin, Instagram } from "lucide-react";
-
-const teamMembers = [
-  {
-    src: "/images/mentor/sha-removebg-preview (1).png",
-    name: "Shammas – CFO",
-    linkedin: "https://www.linkedin.com/in/muhammedshammasmc/",
-    instagram: "https://www.instagram.com/shammmaaaas._",
-  },
-  {
-    src: "/images/mentor/ashi-removebg-preview (1).png",
-    name: "Ashique – Founder & CTO",
-    linkedin: "https://www.linkedin.com/in/ashq/",
-    instagram: "https://www.instagram.com/ashique.exe",
-  },
-  {
-    src: "/images/mentor/nishi-removebg-preview (1).png",
-    name: "Nishal – CEO",
-    linkedin: "https://www.linkedin.com/in/nishalll/",
-    instagram: "https://www.instagram.com/nishhaaallll",
-  },
-];
-
-const SocialOverlay = ({
-  linkedin,
-  instagram,
-  name,
-}: {
-  linkedin: string;
-  instagram: string;
-  name: string;
-}) => (
-  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 text-white">
-    <div className="flex gap-6">
-      <a
-        href={linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-green-400 transition"
-      >
-        <Linkedin size={28} />
-      </a>
-      <a
-        href={instagram}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-pink-400 transition"
-      >
-        <Instagram size={28} />
-      </a>
-    </div>
-    <p className="mt-2 text-sm font-semibold text-white">{name}</p>
-  </div>
-);
 
 const AboutUsHero = () => {
   return (
     <section className="w-full min-h-screen bg-black text-white py-16 px-6 sm:px-12 md:px-16 relative overflow-hidden">
-      {/* Decorative Grid Background (increased height) */}
+      {/* Decorative Grid Background */}
       <div className="absolute inset-0 min-h-[150%] bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col md:flex-row gap-20 items-center justify-between">
@@ -100,80 +46,16 @@ const AboutUsHero = () => {
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 relative">
-          {/* Mobile Layout */}
-          <div className="flex flex-col gap-6 md:hidden w-4/5 mx-auto mt-8">
-            {teamMembers.map((member, idx) => (
-              <div
-                key={idx}
-                className="relative w-full h-64 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] group"
-              >
-                <Image
-                  src={member.src}
-                  alt={`Team ${idx}`}
-                  fill
-                  style={{ objectFit: "contain" }}
-                  priority
-                />
-                <SocialOverlay
-                  linkedin={member.linkedin}
-                  instagram={member.instagram}
-                  name={member.name}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-center relative h-[480px]">
-            {/* Left */}
-            <div className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 group hover:scale-105 transition-transform duration-300">
-              <Image
-                src={teamMembers[0].src}
-                alt="Team Left"
-                fill
-                style={{ objectFit: "contain" }}
-                priority
-              />
-              <SocialOverlay
-                linkedin={teamMembers[0].linkedin}
-                instagram={teamMembers[0].instagram}
-                name={teamMembers[0].name}
-              />
-            </div>
-
-            {/* Center */}
-            <div className="z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_40px_rgba(0,255,0,0.5)] scale-110 group relative">
-              <Image
-                src={teamMembers[1].src}
-                alt="Team Center"
-                fill
-                style={{ objectFit: "contain" }}
-                priority
-              />
-              <SocialOverlay
-                linkedin={teamMembers[1].linkedin}
-                instagram={teamMembers[1].instagram}
-                name={teamMembers[1].name}
-              />
-            </div>
-
-            {/* Right */}
-            <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-2 border-green-500 overflow-hidden shadow-[0_0_20px_rgba(0,255,0,0.3)] z-10 group hover:scale-105 transition-transform duration-300">
-              <Image
-                src={teamMembers[2].src}
-                alt="Team Right"
-                fill
-                style={{ objectFit: "contain" }}
-                priority
-              />
-              <SocialOverlay
-                linkedin={teamMembers[2].linkedin}
-                instagram={teamMembers[2].instagram}
-                name={teamMembers[2].name}
-              />
-            </div>
+        {/* Single Image Section – clean, no border or glow */}
+        <div className="w-full md:w-1/2 flex justify-center items-center">
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-xl overflow-hidden">
+            <Image
+              src="/images/mentor/aboutus.png"
+              alt="Team Group"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
           </div>
         </div>
       </div>

@@ -170,12 +170,12 @@ export const courses = [
     brochure: "/brochures/adpt.pdf",
     details:
       "Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
-    whatYouLearn: [
-      "Incident detection and response",
-      "Digital forensics fundamentals",
-      "Evidence collection and preservation",
-      "Analyzing and reporting incidents",
-    ],
+    // whatYouLearn: [
+    //   "Incident detection and response",
+    //   "Digital forensics fundamentals",
+    //   "Evidence collection and preservation",
+    //   "Analyzing and reporting incidents",
+    // ],
     modules: [
       "Information Security Introduction",
       "Linux Fundamentals",
@@ -221,19 +221,22 @@ export const courses = [
     brochure: "/brochures/cca-plus.pdf",
     details:
       "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
-    whatYouLearn: [
-      "Ethical hacking fundamentals",
-      "Penetration testing techniques",
-      "Using Kali Linux and Metasploit",
-      "Vulnerability scanning and assessment",
-    ],
+    // whatYouLearn: [
+    //   "Ethical hacking fundamentals",
+    //   "Penetration testing techniques",
+    //   "Using Kali Linux and Metasploit",
+    //   "Vulnerability scanning and assessment",
+    // ],
     modules: [
-      "Ethical Hacking Overview",
-      "Penetration Testing Methodologies",
-      "Kali Linux Essentials",
-      "Metasploit Framework",
-      "Vulnerability Scanning",
+      "Information Security Introduction",
+      "Linux Fundamentals",
+      "Networking",
+      "Networking Vulnerability Assessment",
+      "Using Metasploit Framework",
+      "Attacking Common Services",
+      "Web Application Hacking",
     ],
+
     careerOpportunities:
       "Penetration Tester, Ethical Hacker, Red Team Specialist, Vulnerability Analyst.",
     certificate:
@@ -322,11 +325,24 @@ export const courses = [
       "Network traffic monitoring",
     ],
     modules: [
-      "Introduction to Network Security",
-      "Firewalls and Access Control",
-      "VPNs and Remote Access",
-      "Network Monitoring and Analysis",
+      "Foundations of Security",
+      "Linux for Hackers",
+      "Networking Fundamentals",
+      "Vulnerability Assessment",
+      "Pentesting Process",
+      "Using Metasploit Framework",
+      "Attacking Common Services",
+      "Web Application Testing",
+      "Incident Handling Process",
+      "Security Operations Center",
+      "Dark Web Monitoring",
+      "Security Monitoring and SIEM Fundamentals",
+      "MITRE Framework",
+      "Log Analysis",
+      "Endpoint Security",
+      "Incident Reporting & Response",
     ],
+
     careerOpportunities:
       "Network Administrator, SOC Analyst, IT Support Engineer.",
     certificate: "Certificate of Completion in Network Security Fundamentals.",

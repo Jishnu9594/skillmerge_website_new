@@ -53,14 +53,14 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
 
         <p className="text-gray-300 mb-6">{course.details}</p>
 
-        <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">
+        {/* <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">
           What You'll Learn
-        </h2>
-        <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
+        </h2> */}
+        {/* <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
           {course.whatYouLearn.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
-        </ul>
+        </ul> */}
 
         <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">Modules</h2>
         <ol className="list-decimal pl-6 text-gray-300 mb-6 space-y-1">
