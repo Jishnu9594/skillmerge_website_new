@@ -35,7 +35,7 @@ const CyberSecurityCoursesHero = () => {
                   alt={course.title}
                   width={400}
                   height={200}
-                  className="w-full h-52 object-cover"
+                  className="w-full h-52 object-contain"
                 />
                 <div className="p-6 text-left">
                   <div className="flex items-center gap-4 text-sm text-[#1BD46C] mb-2">

@@ -11,6 +11,7 @@ const navItems = [
   { name: "Courses", href: "/courses" },
   { name: "Workshop", href: "/workshop" },
   { name: "Blog", href: "/blog" },
+  { name: "Gallery", href: "/gallery" },
 ];
 
 const Header: React.FC = () => {
