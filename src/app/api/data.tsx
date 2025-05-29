@@ -22,7 +22,7 @@ export const courseData: {
   imgSrc: string;
   description: string;
   students: number;
-  classes: number;
+  duration: string;
 }[] = [
   {
     heading: "Advanced Diploma in Purple Teaming (ADPT)",
@@ -30,7 +30,7 @@ export const courseData: {
     description:
       "Advanced Diploma in Purple Teaming is a fully practical program that combines both offensive (red team) and defensive (blue team) techniques to build complete cybersecurity skills. You'll learn real-world attack and defense strategies through hands-on training. Eligible students will also work on live internship projects based on their performance, gaining valuable, real-time experience in purple teaming operations.",
     students: 150,
-    classes: 12,
+    duration: "10 months",
   },
   {
     heading: "CCA - Certified CyberSecurity Associate",
@@ -38,7 +38,7 @@ export const courseData: {
     description:
       "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     students: 150,
-    classes: 12,
+    duration: "2 months",
   },
   {
     heading: "INTERNSHIP",
@@ -46,7 +46,7 @@ export const courseData: {
     description:
       "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
     students: 130,
-    classes: 12,
+    duration: "6 months",
   },
   {
     heading: "Certified CyberSecurity Specialist (CCS)",
@@ -54,25 +54,16 @@ export const courseData: {
     description:
       "Cybersecurity Specialist is a fully practical program covering both offensive and defensive security. Learn to hack like an attacker and defend like a pro through real-world, hands-on training designed to build complete cybersecurity expertise.",
     students: 120,
-    classes: 12,
+    duration: "4 months",
   },
-
   {
     heading: "CCA + INTERNSHIP",
     imgSrc: "/images/companies/5.png",
     description:
       "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
     students: 150,
-    classes: 12,
+    duration: "5 months",
   },
-  // {
-  //   heading: "We Launch Delia Webflow this Week!",
-  //   imgSrc: "/images/companies/jbc.png",
-  //   description:
-  //     "A quick course on launching a secure, high-performance website using Webflow.",
-  //   students: 150,
-  //   classes: 12,
-  // },
 ];
 
 export const MentorData: {
@@ -175,7 +166,6 @@ export const courses = [
     slug: "advanced-diploma-in-purple-teaming-adpt",
     title: "Advanced Diploma in Purple Teaming (ADPT)",
     hours: "10 months",
-    lessons: "12 lessons",
     image: "/images/companies/3.png",
     brochure: "/brochures/adpt.pdf",
     details:
@@ -187,11 +177,37 @@ export const courses = [
       "Analyzing and reporting incidents",
     ],
     modules: [
-      "Incident Response Planning",
-      "Forensic Investigation Techniques",
-      "Data Collection and Preservation",
-      "Incident Analysis and Reporting",
+      "Information Security Introduction",
+      "Linux Fundamentals",
+      "Networking",
+      "Windows Fundamentals",
+      "Pretesting Process",
+      "Information Gathering",
+      "Vulnerability Assessment",
+      "Using Metasploit Framework",
+      "Shells and Payload",
+      "Password Attacks",
+      "Attacking Common Services",
+      "Web Application Hacking",
+      "API Security",
+      "Incident Handling Process",
+      "Security Monitoring and SIEM Fundamentals",
+      "MITRE Framework",
+      "Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)",
+      "Active Directory Enumeration and Attacks",
+      "Mobile Pentesting",
+      "Bash Scripting",
+      "Digital Forensics",
+      "Malware Analysis",
+      "Detecting Windows Attacks with Splunk",
+      "Security Incident Reporting",
+      "Developing CRUD Applications and CTF Machines",
+      "Bug Bounty and Burp Automation",
+      "CTFs",
+      "AD and API Level Projects",
+      "Building Defending Machines with ELK",
     ],
+
     careerOpportunities:
       "Incident Responder, Digital Forensics Analyst, Cyber Threat Analyst.",
     certificate: "Professional Certificate in Incident Response and Forensics.",
@@ -200,7 +216,7 @@ export const courses = [
     slug: "cca-certified-cyberSecurity-associate",
     title: "CCA - Certified CyberSecurity Associate",
     hours: "5 months",
-    lessons: "18 lessons",
+
     image: "/images/companies/2.png",
     brochure: "/brochures/cca-plus.pdf",
     details:
@@ -227,7 +243,7 @@ export const courses = [
     slug: "internship",
     title: "INTERNSHIP",
     hours: "6 months",
-    lessons: "20 lessons",
+
     image: "/images/companies/4.png",
     brochure: "/images/resources/download.pdf",
     details:
@@ -295,7 +311,6 @@ export const courses = [
     slug: "certified-cyber-security-specialist-ccs",
     title: "Certified CyberSecurity Specialist (CCS)",
     hours: "4 months",
-    lessons: "15 lessons",
     image: "/images/companies/1.png",
     brochure: "/brochures/ccs.pdf",
     details:
@@ -320,7 +335,7 @@ export const courses = [
     slug: "cca-internship",
     title: "CCA + INTERNSHIP",
     hours: "5 Month Training",
-    lessons: "14 lessons",
+
     image: "/images/companies/5.png",
     brochure: "/brochures/ceh.pdf",
     details:

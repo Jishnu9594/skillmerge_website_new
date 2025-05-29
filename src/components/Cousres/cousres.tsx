@@ -43,10 +43,10 @@ const CyberSecurityCoursesHero = () => {
                       <FaClock />
                       <span>{course.hours}</span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    {/* <div className="flex items-center gap-1">
                       <FaBookOpen />
                       <span>{course.lessons}</span>
-                    </div>
+                    </div> */}
                   </div>
 
                   <h3 className="text-xl font-semibold mb-2 text-white">

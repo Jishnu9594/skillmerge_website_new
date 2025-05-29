@@ -82,22 +82,20 @@ const Courses = () => {
               <div className="flex justify-between items-center mt-4">
                 <div className="flex items-center gap-2">
                   <Icon
-                    icon="solar:notebook-minimalistic-outline"
+                    icon="solar:calendar-outline"
                     className="text-cyber-green text-xl"
                   />
                   <span className="text-white text-base opacity-90">
-                    {items.classes} classes
+                    Duration: {items.duration}
                   </span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Icon
-                    icon="solar:users-group-rounded-linear"
-                    className="text-cyber-green text-xl"
-                  />
-                  <span className="text-white text-base opacity-90">
-                    {items.students} students
-                  </span>
-                </div>
+
+                <Link
+                  href={`/courses`}
+                  className="bg-[#00ff99] text-black text-sm font-semibold py-2 px-4 rounded-lg hover:bg-[#00cc7a] transition-all duration-300"
+                >
+                  Learn More
+                </Link>
               </div>
             </div>
           ))}
