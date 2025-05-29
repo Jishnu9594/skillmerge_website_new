@@ -11,6 +11,7 @@ import { Metadata } from "next";
 import CoursesHero from "@/components/Cousres/cousres";
 import WorkshopSection from "@/components/Workshops/Workshop";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
+import MapSection from "@/components/Map/Map";
 export const metadata: Metadata = {
   title: "Skillmerge |Workshop",
 };
@@ -25,6 +26,7 @@ export default function Course() {
       <Testimonial />
       <ScrollingBanner />
       <FaqContactSection />
+      <MapSection />
     </main>
   );
 }

@@ -8,10 +8,10 @@ export const TrustedCompanies = [
     name: "gobosoft",
   },
   { imgSrc: "/images/companies/nergy-vidya-logo.svg", name: "nergy" },
-  {
-    imgSrc: "/images/companies/nexus-removebg-preview.png",
-    name: "purplenexus",
-  },
+  // {
+  //   imgSrc: "/images/companies/nexus-removebg-preview.png",
+  //   name: "purplenexus",
+  // },
   { imgSrc: "/images/companies/wh_lg-1024x651.png", name: "neogenmedia" },
   { imgSrc: "/images/companies/ishkanlogo.png", name: "ishakan" },
   { imgSrc: "/images/companies/innovatexlogo.png", name: "innovatexlabs" },

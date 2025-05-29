@@ -10,6 +10,7 @@ import FaqContactSection from "@/components/faq/faq";
 import WhatIsHackingSection from "@/components/youtubevideo/youtube";
 // import GalleryCarousel from "@/components/Gallery/Gallery";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
+import MapSection from "@/components/Map/Map";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -70,6 +71,7 @@ export default function Home() {
       <Testimonial />
       <ScrollingBanner />
       <FaqContactSection />
+      <MapSection />
     </main>
   );
 }

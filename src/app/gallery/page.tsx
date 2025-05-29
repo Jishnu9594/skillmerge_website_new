@@ -10,6 +10,7 @@ import FaqContactSection from "@/components/faq/faq";
 import AboutUsSection from "@/components/Aboutus/About";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import HeroGallery from "@/components/Gallery/Gallery";
+import MapSection from "@/components/Map/Map";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Skillmerge | Gallery",
@@ -25,6 +26,7 @@ export default function About() {
       <Courses />
       <Testimonial />
       <ScrollingBanner />
+      <MapSection />
     </main>
   );
 }

@@ -94,7 +94,7 @@ const Footer = () => {
                 icon="tabler:folder"
                 className="text-green-400 text-3xl inline-block"
               />
-              <h5 className="text-lg text-gray-400">skillmergehub@gmail.com</h5>
+              <h5 className="text-lg text-gray-400">info@skillmerge.in</h5>
             </div>
           </div>
         </div>

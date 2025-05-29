@@ -9,6 +9,7 @@ import ScrollingBanner from "@/components/scrollingbanner/scrollingbaner";
 import FaqContactSection from "@/components/faq/faq";
 import AboutUsSection from "@/components/Aboutus/About";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
+import MapSection from "@/components/Map/Map";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Skillmerge | About Us",
@@ -24,6 +25,7 @@ export default function About() {
       <Courses />
       <Testimonial />
       <ScrollingBanner />
+      <MapSection />
     </main>
   );
 }
