@@ -71,7 +71,7 @@ export default function HeroGallery() {
             <img
               src={src}
               alt={`Gallery image ${i + 1}`}
-              className="w-full h-64 object-cover"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover"
             />
           </div>
         ))}

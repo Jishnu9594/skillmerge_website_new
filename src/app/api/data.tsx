@@ -60,7 +60,7 @@ export const courseData: {
     heading: "CCA + INTERNSHIP",
     imgSrc: "/images/companies/5.png",
     description:
-      "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
+      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     students: 150,
     duration: "5 months",
   },
@@ -355,7 +355,7 @@ export const courses = [
     image: "/images/companies/5.png",
     brochure: "/brochures/ceh.pdf",
     details:
-      "The CEH certification by EC-Council validates ethical hacking skills. This 1-month intensive course covers key hacking techniques, tools like Metasploit and Nmap, and hands-on labs, preparing you to pass the CEH exam and excel in penetration testing.",
+      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     whatYouLearn: [
       "Cloud computing basics",
       "Cloud security challenges",

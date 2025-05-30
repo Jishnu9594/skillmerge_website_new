@@ -14,7 +14,7 @@ const Footer = () => {
             <Logo />
             <div className="flex items-center gap-4 mt-6">
               <Link
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61563365234885#"
                 className="hover:text-green-400 text-gray-400 text-3xl transition-colors"
               >
                 <Icon icon="tabler:brand-facebook" />
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Icon icon="tabler:brand-twitter" />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/skillmergeindia/?hl=en"
                 className="hover:text-green-400 text-gray-400 text-3xl transition-colors"
               >
                 <Icon icon="tabler:brand-instagram" />
@@ -57,16 +57,14 @@ const Footer = () => {
               Other
             </h3>
             <ul>
-              {["About Us", "Our Team", "Career", "Services", "Contact"].map(
-                (text, i) => (
-                  <li
-                    key={i}
-                    className="mb-2 text-gray-400 hover:text-green-400 w-fit transition-colors"
-                  >
-                    <Link href="#">{text}</Link>
-                  </li>
-                )
-              )}
+              {["About Us", "Our Team", "Contact"].map((text, i) => (
+                <li
+                  key={i}
+                  className="mb-2 text-gray-400 hover:text-green-400 w-fit transition-colors"
+                >
+                  <Link href="#">{text}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -102,7 +100,7 @@ const Footer = () => {
         {/* Footer bottom */}
         <div className="mt-10 lg:flex items-center justify-between text-gray-500 text-sm">
           <h4 className="text-center lg:text-left font-normal">
-            &copy; 2025 INNOVATE_XLAB. All Rights Reserved by{" "}
+            &copy; 2025 Skillmerge. All Rights Reserved by{" "}
             <Link
               href="#"
               target="_blank"
