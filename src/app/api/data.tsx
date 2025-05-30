@@ -44,7 +44,7 @@ export const courseData: {
     heading: "INTERNSHIP",
     imgSrc: "/images/companies/4.png",
     description:
-      "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
+      "Join our cybersecurity team and get hands-on experience in protecting digital infrastructure. This internship is ideal for students or fresh graduates passionate about ethical hacking, system security, and threat analysis. You’ll work alongside professionals to understand real-world security challenges and contribute to ongoing projects.",
     students: 130,
     duration: "6 months",
   },
@@ -250,7 +250,7 @@ export const courses = [
     image: "/images/companies/4.png",
     brochure: "/images/resources/download.pdf",
     details:
-      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
+      "Join our cybersecurity team and get hands-on experience in protecting digital infrastructure. This internship is ideal for students or fresh graduates passionate about ethical hacking, system security, and threat analysis. You’ll work alongside professionals to understand real-world security challenges and contribute to ongoing projects.",
     whatYouLearn: [
       "Information Security Introduction",
       "Linux Fundamentals",
