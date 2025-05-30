@@ -1,20 +1,20 @@
 export const TrustedCompanies = [
-  { imgSrc: "/images/companies/jbc.png", name: "JBC" },
-  { imgSrc: "/images/companies/eme-logo (1).png", name: "EME" },
-  { imgSrc: "/images/companies/Final-Logo-09.png", name: "techcolud" },
+  { imgSrc: "/images/companies/jbc.png", name: "" },
+  { imgSrc: "/images/companies/eme-logo (1).png", name: "" },
+  { imgSrc: "/images/companies/Final-Logo-09.png", name: "" },
   {
     imgSrc:
       "/images/companies/globosoft_technology_solutions_logo-removebg-preview.png",
-    name: "gobosoft",
+    name: "",
   },
-  { imgSrc: "/images/companies/nergy-vidya-logo.svg", name: "nergy" },
+  { imgSrc: "/images/companies/nergy-vidya-logo.svg", name: "" },
   // {
   //   imgSrc: "/images/companies/nexus-removebg-preview.png",
   //   name: "purplenexus",
   // },
-  { imgSrc: "/images/companies/wh_lg-1024x651.png", name: "neogenmedia" },
-  { imgSrc: "/images/companies/ishkanlogo.png", name: "ishakan" },
-  { imgSrc: "/images/companies/innovatexlogo.png", name: "innovatexlabs" },
+  { imgSrc: "/images/companies/wh_lg-1024x651.png", name: "" },
+  { imgSrc: "/images/companies/ishkhan white.png", name: "" },
+  { imgSrc: "/images/companies/innovatexlogo.png", name: "" },
 ];
 
 export const courseData: {
@@ -220,7 +220,7 @@ export const courses = [
     image: "/images/companies/2.png",
     brochure: "/brochures/cca-plus.pdf",
     details:
-      "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
+      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
     // whatYouLearn: [
     //   "Ethical hacking fundamentals",
     //   "Penetration testing techniques",
@@ -355,7 +355,7 @@ export const courses = [
     image: "/images/companies/5.png",
     brochure: "/brochures/ceh.pdf",
     details:
-      "Certified Cybersecurity Associate is a fully practical course focused on offensive security. Learn ethical hacking, real-world attack techniques, and how to think like a hacker to build a strong foundation in cybersecurity.",
+      "Certified Cybersecurity Associate + Internship is a fully practical, offensive security-focused program designed to teach you real-world ethical hacking and penetration testing skills. After the training, eligible students will work on hands-on projects during the internship, gaining real-time experience and applying what they've learned in live environments—preparing you for a strong start in the cybersecurity field.",
     whatYouLearn: [
       "Cloud computing basics",
       "Cloud security challenges",

@@ -4,7 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { TrustedCompanies } from "@/app/api/data"; // Your updated data
+import { TrustedCompanies } from "@/app/api/data";
 
 const AnimatedBackground = () => (
   <div className="absolute inset-0 z-0 overflow-hidden">
@@ -43,7 +43,7 @@ const Companies = () => {
             {TrustedCompanies.map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col justify-center items-center group transition duration-300"
+                className="flex flex-col justify-center items-center transition duration-300"
               >
                 <img
                   src={item.imgSrc}
@@ -52,15 +52,8 @@ const Companies = () => {
                   height={36}
                   loading="lazy"
                   draggable={false}
-                  className="object-contain hover:scale-105 transition-transform duration-300"
+                  className="object-contain"
                 />
-                <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition duration-300">
-                  {item.imgSrc
-                    .split("/")
-                    .pop()
-                    ?.replace(/\.[^/.]+$/, "")
-                    .toUpperCase()}
-                </span>
               </div>
             ))}
           </Slider>

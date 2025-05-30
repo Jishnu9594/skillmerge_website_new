@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const rotatingWords = [
   "Cybersecurity",
@@ -16,6 +16,8 @@ const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [letterIndex, setLetterIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
     const currentWord = rotatingWords[currentWordIndex];
@@ -41,30 +43,55 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [letterIndex, isDeleting, currentWordIndex]);
 
+  const validateForm = (form: HTMLFormElement) => {
+    const formData = new FormData(form);
+    const newErrors: { [key: string]: string } = {};
+
+    if (!formData.get("name")?.toString().trim())
+      newErrors.name = "Name is required";
+    if (!formData.get("email")?.toString().trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.get("email")!.toString())) {
+      newErrors.email = "Enter a valid email address";
+    }
+    if (!formData.get("phone")?.toString().trim())
+      newErrors.phone = "Phone number is required";
+    if (!formData.get("qualification")?.toString().trim())
+      newErrors.qualification = "Qualification is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
 
-    emailjs
-      .sendForm(
-        "service_j9yjjp5", // Replace with your EmailJS service ID
-        "template_5ubkxxo", // Replace with your EmailJS template ID
-        e.currentTarget,
-        "UKlZisTZGOT0L9ggF" // Replace with your EmailJS public key
-      )
-      .then(
-        () => {
-          alert("Inquiry sent successfully!");
-          e.currentTarget.reset();
-        },
-        (error) => {
-          console.error(error.text);
-          alert("Failed to send inquiry.");
-        }
+    if (!validateForm(form)) return;
+
+    setIsSending(true);
+
+    try {
+      const result = await emailjs.sendForm(
+        "service_j9yjjp5", // 🔁 Replace with your actual service ID
+        "template_5ubkxxo", // 🔁 Replace with your actual template ID
+        form,
+        "UKlZisTZGOT0L9ggF" // 🔁 Replace with your EmailJS Public Key
       );
+
+      alert("Inquiry sent successfully!");
+      form.reset();
+      setErrors({});
+    } catch (error) {
+      console.error("Email send error:", error);
+      alert("Failed to send inquiry. Please try again later.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const openWhatsApp = (message: string) => {
-    const phoneNumber = "+919037937434"; // Updated number
+    const phoneNumber = "+919037937434";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
@@ -149,41 +176,64 @@ const Hero = () => {
               consultation.
             </p>
 
-            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required
-                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                required
-                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                required
-                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
-              />
-              <input
-                type="text"
-                name="qualification"
-                placeholder="Your Highest Qualification"
-                required
-                className="bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
-              />
+            <form
+              className="flex flex-col gap-4"
+              onSubmit={handleSubmit}
+              noValidate
+            >
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="qualification"
+                  placeholder="Your Highest Qualification"
+                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                />
+                {errors.qualification && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.qualification}
+                  </p>
+                )}
+              </div>
 
               <button
                 type="submit"
+                disabled={isSending}
                 className="bg-[#1BD46C] hover:bg-[#16b55b] text-black font-semibold py-3 rounded-md"
               >
-                Submit Inquiry
+                {isSending ? "Sending..." : "Submit Inquiry"}
               </button>
             </form>
           </div>

@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           {/* Other Links */}
-          <div className="col-span-2">
+          {/* <div className="col-span-2">
             <h3 className="mb-4 text-2xl font-semibold text-green-400">
               Other
             </h3>
@@ -66,7 +66,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div className="col-span-4 md:col-span-4 lg:col-span-4 space-y-8">

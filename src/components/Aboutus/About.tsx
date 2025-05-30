@@ -6,7 +6,7 @@ const AboutUsHero = () => {
       {/* Decorative Grid Background */}
       <div className="absolute inset-0 min-h-[150%] bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col md:flex-row gap-20 items-center justify-between">
+      <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col-reverse md:flex-row gap-20 items-center justify-between">
         {/* Text Section */}
         <div className="w-full md:w-1/2 space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold border-l-4 border-green-500 pl-4 tracking-wide text-white">
@@ -30,7 +30,7 @@ const AboutUsHero = () => {
               <p className="text-gray-400 text-sm sm:text-base">
                 SkillMerge offers practical, affordable cybersecurity training
                 focused on real-world skills for jobs and internships—not just
-                certificates
+                certificates.
               </p>
             </div>
             <div className="bg-black border-l-4 border-green-500 p-4 rounded shadow-md">
@@ -40,15 +40,15 @@ const AboutUsHero = () => {
               <p className="text-gray-400 text-sm sm:text-base">
                 We aim to be India’s most trusted cybersecurity learning
                 platform. With the right support, anyone can start a great
-                career, join top companies, and help build a safer internet
+                career, join top companies, and help build a safer internet.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Single Image Section – clean, no border or glow */}
+        {/* Image Section – appears first on mobile */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
-          <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-xl overflow-hidden">
+          <div className="relative w-80 h-80 sm:w-[28rem] sm:h-[28rem] md:w-[32rem] md:h-[32rem] rounded-xl overflow-hidden">
             <Image
               src="/images/mentor/aboutus.png"
               alt="Team Group"
