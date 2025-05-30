@@ -4,7 +4,7 @@ export default function HeroGallery() {
   const images = [
     "/images/gallery/ga21.jpeg",
     "/images/gallery/ga20.jpeg",
-    "/images/gallery/ga1.jpeg",
+    "/images/gallery/ga19.jpeg",
     "/images/gallery/ga2.jpeg",
     "/images/gallery/ga3.jpeg",
     "/images/gallery/ga4.jpeg",
@@ -22,7 +22,7 @@ export default function HeroGallery() {
     "/images/gallery/ga16.jpeg",
     "/images/gallery/ga17.jpeg",
     "/images/gallery/ga18.jpeg",
-    "/images/gallery/ga19.jpeg",
+    "/images/gallery/ga1.jpeg",
     "/images/gallery/ga22.jpeg",
     "/images/gallery/ga23.jpeg",
     "/images/gallery/ga24.jpeg",
@@ -33,8 +33,8 @@ export default function HeroGallery() {
     "/images/gallery/ga29.jpeg",
     "/images/gallery/ga30.jpeg",
     "/images/gallery/ga31.jpeg",
-    "/images/gallery/ga32.jpeg",
-    "/images/gallery/ga33.jpeg",
+    "/images/gallery/ga51.jpeg",
+    "/images/gallery/ga2.jpeg",
     "/images/gallery/ga34.jpeg",
     "/images/gallery/ga35.jpeg",
     "/images/gallery/ga36.jpeg",
@@ -47,6 +47,12 @@ export default function HeroGallery() {
     "/images/gallery/ga43.jpeg",
     "/images/gallery/ga44.jpeg",
     "/images/gallery/ga45.jpeg",
+    "/images/gallery/ga52.jpeg",
+    "/images/gallery/ga53.jpeg",
+    "/images/gallery/ga54.jpeg",
+    "/images/gallery/ga55.jpeg",
+    "/images/gallery/ga56.jpeg",
+    "/images/gallery/ga57.jpeg",
   ];
 
   return (
