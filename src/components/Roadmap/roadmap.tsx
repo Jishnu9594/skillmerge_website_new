@@ -14,7 +14,7 @@ const SkillMergeRoadmap = () => {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-          Your Skill Merge Roadmap
+          Your SkillMerge Roadmap
         </h2>
 
         {/* Desktop image (hidden on small screens) */}

@@ -14,8 +14,6 @@ export default function HeroGallery() {
     "/images/gallery/ga8.jpeg",
     "/images/gallery/ga9.jpeg",
     "/images/gallery/ga10.jpeg",
-    "/images/gallery/ga11.jpeg",
-    "/images/gallery/ga12.jpeg",
     "/images/gallery/ga13.jpeg",
     "/images/gallery/ga14.jpeg",
     "/images/gallery/ga15.jpeg",
