@@ -11,6 +11,7 @@ import AboutUsSection from "@/components/Aboutus/About";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import HeroGallery from "@/components/Gallery/Gallery";
 import MapSection from "@/components/Map/Map";
+import SkillMergeRoadmap from "@/components/Roadmap/roadmap";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Skillmerge | Gallery",
@@ -24,6 +25,7 @@ export default function About() {
       <ScrollingBanner />
       <ProgramHighlights />
       <Courses />
+      <SkillMergeRoadmap />
       <Testimonial />
       <ScrollingBanner />
       <MapSection />

@@ -11,6 +11,7 @@ import WhatIsHackingSection from "@/components/youtubevideo/youtube";
 // import GalleryCarousel from "@/components/Gallery/Gallery";
 import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import MapSection from "@/components/Map/Map";
+import SkillMergeRoadmap from "@/components/Roadmap/roadmap";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ export default function Home() {
       <ProgramHighlights />
       <Companies />
       <Courses />
+      <SkillMergeRoadmap />
       <Mentor />
       <ScrollingBanner />
       <Testimonial />
