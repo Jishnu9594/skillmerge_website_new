@@ -74,10 +74,10 @@ export default function CourseDetail({ params }: { params: { slug: string } }) {
         </h2>
         <p className="text-gray-300 mb-6">{course.careerOpportunities}</p>
 
-        <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">
+        {/* <h2 className="text-2xl font-semibold mb-2 text-[#1BD46C]">
           Certificate Overview
         </h2>
-        <p className="text-gray-300 mb-6">{course.certificate}</p>
+        <p className="text-gray-300 mb-6">{course.certificate}</p> */}
 
         {/* Pass the brochure URL dynamically */}
         <div className="mt-8">
