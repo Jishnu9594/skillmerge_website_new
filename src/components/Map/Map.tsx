@@ -4,13 +4,13 @@ import React from "react";
 const MapSection = () => {
   return (
     <section className="bg-black py-16 text-white font-blog" id="location">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h2 className="text-3xl lg:text-4xl font-bold mb-8">Our Location</h2>
         <p className="text-gray-300 mb-6 max-w-xl mx-auto">
           Visit our SkillMerge hub located in Kochi, Kerala.
         </p>
 
-        <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg border-2 border-cyber-green">
+        <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg shadow-purple-600/30">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.2517875809303!2d76.31306797414548!3d9.996048490109152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d2e8045df59%3A0x7d42aca33655f599!2sExperts%20Skillmerge%20hub%20Pvt%20ltd!5e0!3m2!1sen!2sin!4v1748495618087!5m2!1sen!2sin"
             width="100%"
@@ -22,6 +22,12 @@ const MapSection = () => {
             className="w-full h-full"
           ></iframe>
         </div>
+      </div>
+
+      {/* Optional animated purple background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute w-[150%] h-[150%] bg-gradient-to-tr from-[#0a001a] via-[#1a001f] to-[#0a001a] animate-pulse-slow opacity-20 rotate-12"></div>
+        <div className="absolute w-[120%] h-[120%] bg-[radial-gradient(circle,#A855F7_1px,transparent_1px)] bg-[length:20px_20px] opacity-10 animate-movePattern"></div>
       </div>
     </section>
   );

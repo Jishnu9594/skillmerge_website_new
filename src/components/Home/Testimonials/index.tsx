@@ -46,13 +46,13 @@ const Testimonial = () => {
             <Icon
               key={`full-${i}`}
               icon="tabler:star-filled"
-              className="text-green-400 text-xl inline-block"
+              className="text-purple-400 text-xl inline-block"
             />
           ))}
         {halfStars > 0 && (
           <Icon
             icon="tabler:star-half-filled"
-            className="text-green-400 text-xl inline-block"
+            className="text-purple-400 text-xl inline-block"
           />
         )}
         {Array(emptyStars)
@@ -79,7 +79,9 @@ const Testimonial = () => {
           {TestimonialData.map((items, i) => (
             <div key={i}>
               <div
-                className="bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-green-500/30 rounded-xl m-4 p-6 shadow-lg transition-all duration-300 hover:scale-[1.01] 
+                className="bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] 
+                border border-purple-500/30 rounded-xl m-4 p-6 shadow-lg 
+                transition-all duration-300 hover:scale-[1.01] 
                 flex flex-col justify-between h-[340px] overflow-hidden"
               >
                 {/* Top: Image */}
@@ -89,7 +91,7 @@ const Testimonial = () => {
                     alt={items.name}
                     width={64}
                     height={64}
-                    className="rounded-full border-2 border-green-400"
+                    className="rounded-full border-2 border-purple-400"
                   />
                 </div>
 
@@ -101,7 +103,7 @@ const Testimonial = () => {
                 {/* Bottom: Name, Profession, Rating */}
                 <div className="flex justify-between items-center mt-auto pt-4">
                   <div>
-                    <h3 className="text-md font-semibold text-green-400">
+                    <h3 className="text-md font-semibold text-purple-400">
                       {items.name}
                     </h3>
                     <p className="text-xs font-light text-gray-500">

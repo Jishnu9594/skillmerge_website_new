@@ -80,15 +80,6 @@ export default function ProgramHighlights() {
       highest_qualification: formData.get("highest_qualification"),
     };
 
-    // ==== EMAILJS CONFIGURATION ====
-    // 1. Sign up on https://www.emailjs.com/
-    // 2. Create Email Service (e.g. Gmail)
-    // 3. Create Email Template with these variables:
-    //    - name
-    //    - email
-    //    - phone
-    //    - highest_qualification
-    // 4. Get your Service ID, Template ID, and Public Key from dashboard
     const SERVICE_ID = "service_j9yjjp5";
     const TEMPLATE_ID = "template_5ubkxxo";
     const PUBLIC_KEY = "UKlZisTZGOT0L9ggF";
@@ -113,10 +104,11 @@ export default function ProgramHighlights() {
         <h2 className="text-4xl font-bold mb-4 text-white">
           Program Highlights
         </h2>
-        <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
           Our training turns beginners into job-ready cybersecurity pros.
         </p>
 
+        {/* Highlight cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {highlights.map((item, index) => (
             <motion.div
@@ -127,12 +119,12 @@ export default function ProgramHighlights() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
-              className="bg-[#0d0d0d] border border-green-800 rounded-xl p-6 flex items-start gap-4 transition-transform duration-300 hover:shadow-[0_0_8px_rgba(0,255,135,0.1)]"
+              className="bg-[#0d0d0d] border border-purple-800 rounded-xl p-6 flex items-start gap-4 transition-transform duration-300 hover:shadow-[0_0_12px_rgba(168,85,247,0.3)]"
             >
-              <div className="bg-green-900 bg-opacity-20 rounded-full p-3">
+              <div className="bg-purple-900 bg-opacity-20 rounded-full p-3">
                 <Icon
                   icon={item.icon}
-                  className="text-green-400"
+                  className="text-purple-400"
                   width={28}
                   height={28}
                 />
@@ -141,28 +133,30 @@ export default function ProgramHighlights() {
                 <h3 className="text-lg font-semibold mb-1 text-white">
                   {item.title}
                 </h3>
-                <p className="text-sm text-white">{item.description}</p>
+                <p className="text-sm text-gray-300">{item.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
+        {/* Apply Button */}
         <motion.button
           onClick={openLeadForm}
           whileHover={{ scale: 1.07 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-block px-8 py-3 font-semibold rounded-lg bg-green-600 text-black hover:bg-green-500 transition-all duration-300"
+          className="inline-block px-8 py-3 font-semibold rounded-lg bg-purple-600 text-white hover:bg-purple-500 transition-all duration-300"
         >
           Apply for the Program
         </motion.button>
       </div>
 
+      {/* Lead Form Modal */}
       {showLeadForm && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
           <div className="bg-[#121212] rounded-lg p-8 max-w-lg w-full relative">
             <button
               onClick={closeLeadForm}
-              className="absolute top-4 right-4 text-white text-2xl font-bold hover:text-green-500"
+              className="absolute top-4 right-4 text-white text-2xl font-bold hover:text-purple-400"
               aria-label="Close Lead Form"
             >
               &times;
@@ -173,7 +167,7 @@ export default function ProgramHighlights() {
             </h3>
 
             {successMessage && (
-              <p className="mb-4 text-green-400 text-center">
+              <p className="mb-4 text-purple-400 text-center">
                 {successMessage}
               </p>
             )}
@@ -208,7 +202,6 @@ export default function ProgramHighlights() {
                 className="p-3 rounded bg-white border border-gray-300"
                 disabled={sending}
               />
-              {/* New Highest Qualification field */}
               <input
                 type="text"
                 name="highest_qualification"
@@ -220,7 +213,7 @@ export default function ProgramHighlights() {
               <button
                 type="submit"
                 disabled={sending}
-                className="bg-green-600 text-black font-semibold rounded py-3 hover:bg-green-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-purple-600 text-white font-semibold rounded py-3 hover:bg-purple-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {sending ? "Sending..." : "Submit"}
               </button>

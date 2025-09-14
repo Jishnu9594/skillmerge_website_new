@@ -407,3 +407,114 @@ export const courses = [
   //     "Certificate of Completion and exam readiness badge for Security+, CISSP, and CEH.",
   // },
 ];
+
+export const successStoryShorts = [
+  {
+    id: 1,
+    title: "Success Story 1",
+    url: "url: https://www.youtube.com/embed/sWY4qZUAphs",
+  },
+  {
+    id: 2,
+    title: "Success Story 2",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_2",
+  },
+  {
+    id: 3,
+    title: "Success Story 3",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_3",
+  },
+  {
+    id: 4,
+    title: "Success Story 4",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_4",
+  },
+  {
+    id: 5,
+    title: "Success Story 5",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_5",
+  },
+  {
+    id: 6,
+    title: "Success Story 6",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_6",
+  },
+  {
+    id: 7,
+    title: "Success Story 7",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_7",
+  },
+  {
+    id: 8,
+    title: "Success Story 8",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_8",
+  },
+  {
+    id: 9,
+    title: "Success Story 9",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_9",
+  },
+  {
+    id: 10,
+    title: "Success Story 10",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_10",
+  },
+  {
+    id: 11,
+    title: "Success Story 11",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_11",
+  },
+  {
+    id: 12,
+    title: "Success Story 12",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_12",
+  },
+  {
+    id: 13,
+    title: "Success Story 13",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_13",
+  },
+  {
+    id: 14,
+    title: "Success Story 14",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_14",
+  },
+  {
+    id: 15,
+    title: "Success Story 15",
+    url: "https://www.youtube.com/embed/SHORT_VIDEO_ID_15",
+  },
+];
+
+export const PlacedStudentsData: {
+  name: string;
+  imgSrc: string;
+  company?: string;
+}[] = [
+  {
+    name: "Surya",
+    imgSrc: "/images/testimonial/3 LPA.jpg",
+    company: "IBM",
+  },
+  {
+    name: "Arjun",
+    imgSrc: "/images/testimonial/5 LPA.jpg",
+    company: "IBM",
+  },
+  {
+    name: "Harris",
+    imgSrc: "images/testimonial/12 LPA.jpg",
+    company: "Bright Technologies",
+  },
+  // {
+  //   name: "Pooja",
+  //   imgSrc: "/images/companies/pooja.jpg",
+  //   company: "FedEx",
+  // },
+  // {
+  //   name: "Denita",
+  //   imgSrc: "/images/companies/denita.jpg",
+  //   company: "Walmart",
+  // },
+  // Add more students as needed
+];

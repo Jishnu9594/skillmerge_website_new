@@ -12,6 +12,7 @@ import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import MapSection from "@/components/Map/Map";
 import SkillMergeRoadmap from "@/components/Roadmap/roadmap";
 import { Metadata } from "next";
+import Placement from "@/components/Placement/Placement";
 export const metadata: Metadata = {
   title: "Skillmerge | About Us",
 };
@@ -26,6 +27,7 @@ export default function About() {
       <Courses />
       <SkillMergeRoadmap />
       <Testimonial />
+      <Placement />
       <ScrollingBanner />
       <MapSection />
     </main>

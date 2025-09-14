@@ -13,6 +13,8 @@ import WhatsAppButton from "@/components/Whatsappbutton/Whatsappbutton";
 import MapSection from "@/components/Map/Map";
 import SkillMergeRoadmap from "@/components/Roadmap/roadmap";
 import { Metadata } from "next";
+import SuccessStoriesSection from "@/components/youtubeshorts/shorts";
+import Placement from "@/components/Placement/Placement";
 
 export const metadata: Metadata = {
   title: "Skillmerge | Home",
@@ -71,6 +73,7 @@ export default function Home() {
       <Mentor />
       <ScrollingBanner />
       <Testimonial />
+      <Placement />
       <ScrollingBanner />
       <FaqContactSection />
       <MapSection />

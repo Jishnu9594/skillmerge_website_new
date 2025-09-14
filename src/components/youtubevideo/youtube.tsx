@@ -5,7 +5,7 @@ const WhatIsHackingSection = () => {
     <section className="w-full bg-black text-white py-20 px-6 sm:px-12 md:px-16">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold border-l-4 border-green-500 pl-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold border-l-4 border-purple-500 pl-4">
           What is Hacking?
         </h2>
 
@@ -20,7 +20,7 @@ const WhatIsHackingSection = () => {
         </p>
 
         {/* Video Container */}
-        <div className="relative pt-[56.25%] w-full rounded-xl border-2 border-green-500 shadow-[0_0_30px_rgba(0,255,0,0.3)] overflow-hidden">
+        <div className="relative pt-[56.25%] w-full rounded-xl border-2 border-purple-500 shadow-[0_0_30px_rgba(168,85,247,0.4)] overflow-hidden">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/2JT53CHVRpI"

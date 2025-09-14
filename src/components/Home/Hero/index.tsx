@@ -72,11 +72,11 @@ const Hero = () => {
     setIsSending(true);
 
     try {
-      const result = await emailjs.sendForm(
-        "service_j9yjjp5", // 🔁 Replace with your actual service ID
-        "template_5ubkxxo", // 🔁 Replace with your actual template ID
+      await emailjs.sendForm(
+        "service_j9yjjp5",
+        "template_5ubkxxo",
         form,
-        "UKlZisTZGOT0L9ggF" // 🔁 Replace with your EmailJS Public Key
+        "UKlZisTZGOT0L9ggF"
       );
 
       alert("Inquiry sent successfully!");
@@ -92,31 +92,33 @@ const Hero = () => {
 
   const openWhatsApp = (message: string) => {
     const phoneNumber = "+919037937434";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(url, "_blank");
   };
 
   return (
     <section
       id="home-section"
-      className="relative bg-[#010D07] text-white overflow-hidden"
+      className="relative bg-black text-white overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="w-full h-full bg-[radial-gradient(circle,#00ff88_1px,transparent_1px)] [background-size:24px_24px] opacity-5 animate-pulse" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-green-800/10 animate-[pulse_10s_ease-in-out_infinite]" />
+        <div className="w-full h-full bg-[radial-gradient(circle,#a855f7_1px,transparent_1px)] [background-size:24px_24px] opacity-10 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-purple-800/10 animate-[pulse_10s_ease-in-out_infinite]" />
       </div>
 
       <div className="relative z-10 container mx-auto lg:max-w-screen-xl px-4 py-28 flex flex-col justify-center min-h-[80vh]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Side */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            <span className="bg-[#0A2218] text-[#70EF9C] px-4 py-2 rounded-full text-sm font-semibold w-fit">
+            <span className="bg-[#1A0B1F] text-purple-400 px-4 py-2 rounded-full text-sm font-semibold w-fit">
               Become an Ethical Hacker
             </span>
 
             <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
-              <span className="text-[#1BD46C]">
+              <span className="text-purple-400">
                 {displayedText}
                 <span className="blinking-cursor">|</span>
               </span>{" "}
@@ -135,7 +137,7 @@ const Hero = () => {
                 onClick={() =>
                   openWhatsApp("Hi, I’m interested in a free demo session.")
                 }
-                className="bg-[#1BD46C] hover:bg-[#16b55b] text-black font-semibold py-3 px-6 rounded-md"
+                className="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-md"
               >
                 Book a Free Demo Session
               </button>
@@ -143,7 +145,7 @@ const Hero = () => {
                 onClick={() =>
                   openWhatsApp("Hi, I’m interested in applying for the course.")
                 }
-                className="bg-transparent border border-white hover:border-[#1BD46C] text-white font-semibold py-3 px-6 rounded-md"
+                className="bg-transparent border border-white hover:border-purple-400 text-white font-semibold py-3 px-6 rounded-md"
               >
                 Apply Now
               </button>
@@ -158,7 +160,7 @@ const Hero = () => {
                 <div key={idx} className="flex items-center gap-2">
                   <Icon
                     icon="mdi:check-circle"
-                    className="text-[#1BD46C] text-lg"
+                    className="text-purple-400 text-lg"
                   />
                   <span className="text-sm">{item}</span>
                 </div>
@@ -167,7 +169,7 @@ const Hero = () => {
           </div>
 
           {/* Form Side */}
-          <div className="lg:col-span-5 bg-[#0A2218] p-8 rounded-xl shadow-lg">
+          <div className="lg:col-span-5 bg-[#1A0B1F] p-8 rounded-xl shadow-lg">
             <h2 className="text-white text-xl font-semibold mb-4 text-center">
               Get a free consultation Today
             </h2>
@@ -186,7 +188,7 @@ const Hero = () => {
                   type="text"
                   name="name"
                   placeholder="Full Name"
-                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                  className="w-full bg-black text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -197,7 +199,7 @@ const Hero = () => {
                   type="email"
                   name="email"
                   placeholder="Email Address"
-                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                  className="w-full bg-black text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -208,7 +210,7 @@ const Hero = () => {
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
-                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                  className="w-full bg-black text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
@@ -219,7 +221,7 @@ const Hero = () => {
                   type="text"
                   name="qualification"
                   placeholder="Your Highest Qualification"
-                  className="w-full bg-[#010D07] text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1BD46C]"
+                  className="w-full bg-black text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 {errors.qualification && (
                   <p className="text-red-500 text-sm mt-1">
@@ -231,7 +233,7 @@ const Hero = () => {
               <button
                 type="submit"
                 disabled={isSending}
-                className="bg-[#1BD46C] hover:bg-[#16b55b] text-black font-semibold py-3 rounded-md"
+                className="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 rounded-md"
               >
                 {isSending ? "Sending..." : "Submit Inquiry"}
               </button>
@@ -243,7 +245,7 @@ const Hero = () => {
       {/* Scroll Icon */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <svg
-          className="w-8 h-8 text-[#1BD46C] animate-bounce"
+          className="w-8 h-8 text-purple-400 animate-bounce"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -262,7 +264,7 @@ const Hero = () => {
         .blinking-cursor {
           font-weight: 100;
           font-size: 1.2rem;
-          color: #1BD46C;
+          color: #a855f7;
           animation: blink 1s step-start infinite;
         }
         @keyframes blink {

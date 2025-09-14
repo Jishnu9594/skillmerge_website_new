@@ -65,16 +65,16 @@ const FaqContactSection = () => {
 
       <div className="max-w-4xl mx-auto space-y-4">
         {faqData.map((item, index) => (
-          <div key={index} className="border-b border-gray-700 pb-4">
+          <div key={index} className="pb-4 border-b border-purple-600/40">
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center text-left text-lg font-semibold hover:text-cyber-green transition"
+              className="w-full flex justify-between items-center text-left text-lg font-semibold hover:text-purple-500 transition-colors duration-300"
             >
               <span>{item.question}</span>
               {activeIndex === index ? (
-                <ChevronUp className="text-cyber-green" />
+                <ChevronUp className="text-purple-500" />
               ) : (
-                <ChevronDown className="text-cyber-green" />
+                <ChevronDown className="text-purple-500" />
               )}
             </button>
             {activeIndex === index && (
@@ -83,11 +83,11 @@ const FaqContactSection = () => {
           </div>
         ))}
 
-        {/* Contact Us Button (white text) */}
+        {/* Contact Us Button */}
         <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="inline-block px-6 py-3 border border-cyber-green text-white font-semibold rounded-full hover:text-cyber-green transition duration-300"
+            className="inline-block px-6 py-3 border border-purple-500 text-white font-semibold rounded-full hover:bg-purple-500 hover:text-black transition-all duration-300"
           >
             Have More Questions? Contact Us
           </a>

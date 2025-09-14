@@ -9,7 +9,6 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Courses", href: "/courses" },
-  // { name: "Workshop", href: "/workshop" },
   { name: "Gallery", href: "/gallery" },
   { name: "Blog", href: "/blog" },
 ];
@@ -20,6 +19,7 @@ const Header: React.FC = () => {
   const [sticky, setSticky] = useState(false);
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const accentPurple = "#9b59b6";
 
   const handleScroll = () => {
     setSticky(window.scrollY >= 80);
@@ -59,14 +59,14 @@ const Header: React.FC = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-white hover:text-green-400 transition font-medium"
+              className={`text-white hover:text-[${accentPurple}] transition font-medium`}
             >
               {item.name}
             </Link>
           ))}
           <a
             href="tel:+91 90379 37434"
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition"
+            className={`bg-[${accentPurple}] hover:bg-opacity-90 text-white px-6 py-2 rounded-full transition`}
           >
             Contact Us
           </a>
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="hover:text-green-400 transition"
+              className={`hover:text-[${accentPurple}] transition`}
               onClick={() => setNavbarOpen(false)}
             >
               {item.name}
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
           ))}
           <a
             href="tel:+91 90379 37434"
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition"
+            className={`bg-[${accentPurple}] hover:bg-opacity-90 text-white px-6 py-2 rounded-full transition`}
           >
             Contact Us
           </a>

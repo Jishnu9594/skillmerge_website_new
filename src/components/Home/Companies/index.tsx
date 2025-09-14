@@ -8,8 +8,11 @@ import { TrustedCompanies } from "@/app/api/data";
 
 const AnimatedBackground = () => (
   <div className="absolute inset-0 z-0 overflow-hidden">
-    <div className="absolute w-[150%] h-[150%] bg-gradient-to-tr from-[#011A10] via-[#010D07] to-[#011A10] animate-pulse-slow opacity-20 rotate-12"></div>
-    <div className="absolute w-[120%] h-[120%] bg-[radial-gradient(circle,#1BD46C_1px,transparent_1px)] bg-[length:20px_20px] opacity-10 animate-movePattern"></div>
+    {/* Soft gradient animation */}
+    <div className="absolute w-[150%] h-[150%] bg-gradient-to-tr from-[#0a0110] via-[#0a0018] to-[#0a0110] animate-pulse-slow opacity-20 rotate-12"></div>
+
+    {/* Purple cyber grid pattern */}
+    <div className="absolute w-[120%] h-[120%] bg-[radial-gradient(circle,#A855F7_1px,transparent_1px)] bg-[length:20px_20px] opacity-15 animate-movePattern"></div>
   </div>
 );
 
@@ -35,15 +38,17 @@ const Companies = () => {
     <section className="relative bg-black text-white text-center overflow-hidden">
       <AnimatedBackground />
       <div className="relative z-10 container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-        <h2 className="text-2xl font-semibold mb-6">
+        {/* White heading */}
+        <h2 className="text-2xl font-semibold mb-6 text-white">
           Trusted by companies of all sizes
         </h2>
-        <div className="py-14 border-b border-gray-700">
+
+        <div className="py-14 border-b border-purple-800">
           <Slider {...settings}>
             {TrustedCompanies.map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col justify-center items-center transition duration-300"
+                className="flex flex-col justify-center items-center transition duration-300 hover:scale-105"
               >
                 <img
                   src={item.imgSrc}
@@ -52,7 +57,7 @@ const Companies = () => {
                   height={36}
                   loading="lazy"
                   draggable={false}
-                  className="object-contain"
+                  className="object-contain opacity-80 hover:opacity-100 transition"
                 />
               </div>
             ))}

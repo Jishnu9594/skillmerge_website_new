@@ -13,6 +13,7 @@ import HeroGallery from "@/components/Gallery/Gallery";
 import MapSection from "@/components/Map/Map";
 import SkillMergeRoadmap from "@/components/Roadmap/roadmap";
 import { Metadata } from "next";
+import Placement from "@/components/Placement/Placement";
 export const metadata: Metadata = {
   title: "Skillmerge | Gallery",
 };
@@ -27,6 +28,7 @@ export default function About() {
       <Courses />
       <SkillMergeRoadmap />
       <Testimonial />
+      <Placement />
       <ScrollingBanner />
       <MapSection />
     </main>

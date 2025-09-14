@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 export default function HeroGallery() {
   const images = [
     "/images/gallery/ga21.jpeg",
@@ -70,7 +72,7 @@ export default function HeroGallery() {
         {images.map((src, i) => (
           <div
             key={i}
-            className="rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-500"
+            className="rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-500 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)]"
           >
             <img
               src={src}

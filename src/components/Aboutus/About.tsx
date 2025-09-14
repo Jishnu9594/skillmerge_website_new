@@ -4,12 +4,12 @@ const AboutUsHero = () => {
   return (
     <section className="w-full min-h-screen bg-black text-white py-16 px-6 sm:px-12 md:px-16 relative overflow-hidden">
       {/* Decorative Grid Background */}
-      <div className="absolute inset-0 min-h-[150%] bg-[radial-gradient(circle,rgba(0,255,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
+      <div className="absolute inset-0 min-h-[150%] bg-[radial-gradient(circle,rgba(168,85,247,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto mt-20 flex flex-col-reverse md:flex-row gap-20 items-center justify-between">
         {/* Text Section */}
         <div className="w-full md:w-1/2 space-y-8">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold border-l-4 border-green-500 pl-4 tracking-wide text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold border-l-4 border-purple-500 pl-4 tracking-wide text-white">
             Who We Are
           </h2>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
@@ -23,7 +23,7 @@ const AboutUsHero = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            <div className="bg-black border-l-4 border-green-500 p-4 rounded shadow-md">
+            <div className="bg-black border-l-4 border-purple-500 p-4 rounded shadow-md">
               <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2">
                 Our Mission
               </h3>
@@ -33,7 +33,7 @@ const AboutUsHero = () => {
                 certificates.
               </p>
             </div>
-            <div className="bg-black border-l-4 border-green-500 p-4 rounded shadow-md">
+            <div className="bg-black border-l-4 border-purple-500 p-4 rounded shadow-md">
               <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2">
                 Our Vision
               </h3>
@@ -63,7 +63,7 @@ const AboutUsHero = () => {
       {/* Down Arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <svg
-          className="w-8 h-8 text-[#1BD46C] animate-bounce"
+          className="w-8 h-8 text-purple-500 animate-bounce"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
